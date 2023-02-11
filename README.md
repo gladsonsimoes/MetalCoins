@@ -3,6 +3,9 @@
 Baixar PDF:
 [Plano de Ensino - Desenvolvimento de Sistemas - V01 - (Em construção).pdf](https://github.com/gladsonsimoes/metalCoins/files/10712387/Plano.de.Ensino.-.Desenvolvimento.de.Sistemas.-.V01.-.Em.construcao.pdf)
 
+## Modelo logico do Banco de dados
+![Captura de tela 2023-02-09 194146](https://user-images.githubusercontent.com/99969693/217955561-a436515d-0d63-42da-8c9c-9704cf4789a7.png)
+
 Contextualização:
 <h5> Uma grande empresa do setor de siderurgia Vix Min S.A no Espírito Santo vem buscando inovar e trazer engajamento para os seus funcionários. O setor de 
 RH fez o levantamento de propostas e acredita que a gamificação e competição saudável entre os funcionários poderá trazer um impacto positivo e novas 
@@ -32,8 +35,3 @@ quantidade de 100 (cem) metalcoins ao criar sua conta.
 O usuário de perfil comum poderá ter uma e somente uma conta corrente. Os movimentos da conta corrente serão registrados de acordo com o 
 tipo de transação (crédito ou débito) devendo constar a identificação da transação, o número da conta corrente a data de atualização e o saldo. O saldo do 
 usuário deverá ser atualizado sempre que houver uma nova transação
-
-
-## Modelo logico do Banco de dados
-![Captura de tela 2023-02-09 194146](https://user-images.githubusercontent.com/99969693/217955561-a436515d-0d63-42da-8c9c-9704cf4789a7.png)
-
