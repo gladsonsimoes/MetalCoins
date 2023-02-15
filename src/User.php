@@ -1,20 +1,5 @@
 <?php
-
-
-class Perfil
-{
-    public $tipoDeUsuario; //atributo para definir o tipo de Usuário
-
-    function __get($variavel)
-    {
-        return $this->$variavel;
-    }
-
-    function __set($variavel, $valor)
-    {
-        $this->$variavel = $valor;
-    }
-}
+include('Perfil.php');
 
 //extender perfil para saber se o usuario é adm ou user
 class Usuario extends Perfil
@@ -35,6 +20,7 @@ class Usuario extends Perfil
 
 }
 
+//novo objeto user da classe Usuario
 $user = new Usuario();
 $user->__set('nome','Gladson');
 $user->__set('email','gladsonssimoes@hotmail.com');
