@@ -1,6 +1,7 @@
 # MetalCoins
 
-PDF dos requisitos:
+PDF dos requisitos: [8980_1.pdf](https://github.com/gladsonsimoes/MetalCoins/files/10849737/8980_1.pdf)
+
 
 ---
 
