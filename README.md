@@ -31,23 +31,34 @@ funcionalidades: </h5>
 - Comprar (Inclui autenticação);
 - Acompanhamento do pedido (Inclui autenticação);
 
-## Requisitos:
+## Requisitos do Sistema MetalCoins:
 
-#### Conta corrente
+- Conta corrente
 
-#### Transações
+- Transações
 
-#### O usuário deverá ter somente um perfil (Administrador ou Comum).
+- O usuário deverá ter somente um perfil (Administrador ou Comum).
 
-#### O perfil Administrador contará com o gerenciamento dos usuários de perfil comum e dos metalcoins.
+- O perfil Administrador contará com o gerenciamento dos usuários de perfil comum e dos metalcoins. 
 
-#### Cada usuário de perfil comum terá uma quantidade de 100 (cem) metalcoins ao criar sua conta.
+- Cada usuário de perfil comum terá uma quantidade de 100 (cem) metalcoins ao criar sua conta.
 
-#### O usuário de perfil comum poderá ter uma e somente uma conta corrente. 
+- O usuário de perfil comum poderá ter uma e somente uma conta corrente. 
 
-#### Os movimentos da conta corrente serão registrados de acordo com o  tipo de transação (crédito ou débito) devendo constar a identificação da transação, o número da conta corrente a data de atualização e o saldo. 
+- Os movimentos da conta corrente serão registrados de acordo com o  tipo de transação (crédito ou débito) devendo constar a identificação da transação, o número da conta corrente a data de atualização e o saldo. 
 
-#### O saldo do usuário deverá ser atualizado sempre que houver uma nova transação
+- O saldo do usuário deverá ser atualizado sempre que houver uma nova transação
+
+- Os pedidos serão gerados a partir da aquisição de produtos. 
+
+- Cada usuário poderá realizar mais de um pedido. 
+
+- Cada pedido deverá conter a identificação: do usuário, dos produtos; quantidade do produto e a data. O usuário conseguirá acompanhar os status dos pedidos que 
+podem variar entre: iniciado, em preparação e disponível para entrega. 
+
+- Cada status possui a data e hora e a sua descrição. 
+
+<br>
 
 ---
 
