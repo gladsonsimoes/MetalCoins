@@ -1,7 +1,6 @@
 # MetalCoins
 
-Baixar PDF:
-[Plano de Ensino - Desenvolvimento de Sistemas - V01 - (Em construção).pdf](https://github.com/gladsonsimoes/metalCoins/files/10712387/Plano.de.Ensino.-.Desenvolvimento.de.Sistemas.-.V01.-.Em.construcao.pdf)
+PDF dos requisitos:
 
 ---
 
@@ -19,23 +18,57 @@ A empresa Softgranvix foi contratada para criar este sistema de e-commerce e ges
 entregar dentro do prazo estabelecido. Neste sistema teremos dois perfis de usuários diferentes: Administrador e Cliente. Estes deverão conter as seguintes 
 funcionalidades: </h5>
 
+## O Sistema terá dois tipos de perfis:
 
-## Perfil Administrador:
+### Perfil Administrador:
 - Gerenciar usuários e metalcoins;
 - Cadastros (Produtos, pedidos e serviços);
 - Atualização do pedido.
-## Perfil Cliente:
+
+### Perfil Cliente:
 - Navegar
 - Comprar (Inclui autenticação);
 - Acompanhamento do pedido (Inclui autenticação);
 
-### Conta corrente
-### Transações
-### O usuário deverá ter somente um perfil (Administrador ou Comum).
+## Requisitos:
 
-O perfil Administrador contará com o gerenciamento dos usuários de perfil comum e dos metalcoins. Cada usuário de perfil comum terá uma 
-quantidade de 100 (cem) metalcoins ao criar sua conta.
+#### Conta corrente
 
-O usuário de perfil comum poderá ter uma e somente uma conta corrente. Os movimentos da conta corrente serão registrados de acordo com o 
-tipo de transação (crédito ou débito) devendo constar a identificação da transação, o número da conta corrente a data de atualização e o saldo. O saldo do 
-usuário deverá ser atualizado sempre que houver uma nova transação
+#### Transações
+
+#### O usuário deverá ter somente um perfil (Administrador ou Comum).
+
+#### O perfil Administrador contará com o gerenciamento dos usuários de perfil comum e dos metalcoins.
+
+#### Cada usuário de perfil comum terá uma quantidade de 100 (cem) metalcoins ao criar sua conta.
+
+#### O usuário de perfil comum poderá ter uma e somente uma conta corrente. 
+
+#### Os movimentos da conta corrente serão registrados de acordo com o  tipo de transação (crédito ou débito) devendo constar a identificação da transação, o número da conta corrente a data de atualização e o saldo. 
+
+#### O saldo do usuário deverá ser atualizado sempre que houver uma nova transação
+
+---
+
+## Contrato Final:
+
+O contrato deve estabelecer que o usuário tem direito a usar a Moeda desde que cumpra as regras estabelecidas pelo Fornecedor, que incluem, mas não se limitam a, obter medalhas, marcar metas e participar de eventos.
+Além disso, o contrato também deverá garantir que o usuário final está compreendendo e concordando com os termos da licença, deve definir claramente o que é permitido com relação ao uso do software e ao Metalcoin, estabelece direitos de propriedade intelectual, limitações de responsabilidade, direitos de acesso e uso do Metalcoin, direitos de rescisão e acesso às informações do usuário.
+Por fim, o contrato também deverá exigir que o usuário final cumpra com as leis aplicáveis.
+Para criar um contrato de licença de usuário final simplificado para o software "Gamificação Empresarial" e definir regras para conquista de moedas cujo nome é "Metalcoin", você deve incluir o seguinte:
+
+1. Uma cláusula garantindo que o usuário final está compreendendo e concordando com os termos da licença.
+
+2. Uma definição clara do que é permitido com relação ao uso do software e ao Metalcoin.
+
+3. Uma definição clara dos direitos de propriedade intelectual do software e do Metalcoin.
+
+4. Uma definição dos direitos de acesso e uso do Metalcoin.
+
+5. Uma cláusula de limitação de responsabilidade.
+
+6. Uma cláusula que possibilite ao desenvolvedor do software o acesso às informações do usuário para fins de manutenção do software.
+
+7. Uma cláusula de arbitragem, se aplicável. (verificação de fraudes).
+
+8. Uma cláusula que obrigue o usuário final a cumprir com as leis aplicáveis.
