@@ -1,7 +1,7 @@
 create database metalcoin;
 use metalcoin;
 
-CREATE TABLE usuario 
+CREATE TABLE usuarios
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
  id_perfil INT,  
@@ -43,11 +43,11 @@ CREATE TABLE pedido
  data_pedido DATE NOT NULL
 ); 
 
-ALTER TABLE usuario ADD FOREIGN KEY(id_perfil) REFERENCES perfil (tipo_de_usuario);
+ALTER TABLE usuarios ADD FOREIGN KEY(id_perfil) REFERENCES perfil (tipo_de_usuario);
 
-ALTER TABLE conta_corrente ADD FOREIGN KEY(id_usuario) REFERENCES usuario (id);
+ALTER TABLE conta_corrente ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);
 
 ALTER TABLE pedido ADD FOREIGN KEY(id_produto) REFERENCES produto (id);
 
-ALTER TABLE pedido ADD FOREIGN KEY(id_usuario) REFERENCES usuario (id);   
+ALTER TABLE pedido ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);   
    
