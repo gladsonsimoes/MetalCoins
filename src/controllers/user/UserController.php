@@ -1,5 +1,5 @@
 <?php
-include_once('././database/conexao.php');
+include_once('../../../database/conexao.php');
 
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -9,6 +9,7 @@ if (!empty($user['createdUser'])) {
 if (empty($id_perfil)) {
     $id_perfil = 1;
 }
+
 $queryUser = "INSERT INTO usuarios (id_perfil, nome, email, senha) 
         VALUES ($id_perfil,
             '" . $user['name'] . "',
@@ -17,3 +18,5 @@ $queryUser = "INSERT INTO usuarios (id_perfil, nome, email, senha)
 var_dump($queryUser);
 $signedUser = $conn->prepare($queryUser);
 $signedUser->execute();
+
+header("location: ../../../index.php");
