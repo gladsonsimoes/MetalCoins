@@ -26,28 +26,28 @@ CREATE TABLE produto
 CREATE TABLE conta_corrente 
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
- id_usuario INT NOT NULL,  
- saldo FLOAT NOT NULL,  
- transacao VARCHAR(45) NOT NULL,  
- data_transacao DATE NOT NULL  
+ idUsuario INT,  
+ Saldo FLOAT NOT NULL,  
+ Transacao VARCHAR(45) NOT NULL,  
+ DataTransacao DATE NOT NULL  
 ); 
 
 CREATE TABLE pedido 
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
- id_produto INT NOT NULL,  
- quantidade_produto INT NOT NULL,  
- id_usuario INT NOT NULL,  
+ idProduto INT,  
+ quantidadeProduto INT NOT NULL,  
+ idUsuario INT,  
  status VARCHAR(45) NOT NULL,  
- valor_pedido FLOAT NOT NULL,
- data_pedido DATE NOT NULL
+ dataPedido DATE NOT NULL ,
+ valorPedido FLOAT NOT NULL
 ); 
 
-ALTER TABLE usuarios ADD FOREIGN KEY(id_perfil) REFERENCES perfil (tipo_de_usuario);
+ALTER TABLE usuario ADD FOREIGN KEY(idPerfil) REFERENCES perfil (tipoDeUsuario);
 
-ALTER TABLE conta_corrente ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);
+ALTER TABLE conta_corrente ADD FOREIGN KEY(idUsuario) REFERENCES usuario (id);
 
 ALTER TABLE pedido ADD FOREIGN KEY(id_produto) REFERENCES produto (id);
 
-ALTER TABLE pedido ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);   
+ALTER TABLE pedido ADD FOREIGN KEY(idUsuario) REFERENCES usuario (id);   
    
