@@ -31,9 +31,9 @@ include_once('./database/conexao.php');
             <br>
             <input type="password" name="password" placeholder="No mínimo 8 caracteres" required></br>
             <br>
-            <input type="submit" value="Entrar" name="createdUser">
+            <input type="submit" value="Entrar" name="loginUser">
         </form>
-        <p>Se for novo, <a href="Cadastro.php">Faça o Cadastro e receba 100 MetalCoins </a></p>
+        <h3>Se for novo, <a href="Cadastro.php">Faça o Cadastro e receba 100 MetalCoins </a></h3>
     </div>
 </body>
 
