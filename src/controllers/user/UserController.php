@@ -3,16 +3,18 @@ include_once('../../../database/conexao.php');
 
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-
+//para cadastro
 if (empty($user['createdUse'])) {
 
-    //em caso do required não funcionar com os campos vazios!
     $empty_input = false;
 
     $user = array_map('trim', $user);
     if (in_array("", $user)) {
         $empty_input = true;
         echo "<p style='color: red;'> Digite os campos corretamente </p>";
+    } else if(!filter_var($user['email'], FILTER_VALIDATE_EMAIL)){
+        $empty_input = true;
+        echo "<p style='color: red;'> Digite um E-mail válido </p>";
     }
 
     //validacao para conta admin e cliente
@@ -31,10 +33,19 @@ if (empty($user['createdUse'])) {
 
         $signedUser = $conn->prepare($queryUser);
 
-        $signedUser->execute();
+        $signedUser-> execute();
+
+        echo "Usuário ".$user['name']." ".$user['email']." cadastrado com sucesso!" ;
+
+        // header("location: ../../../index.html");
     }
 }
 
-//direcionamento após o cadastro
-header("location: ../../../index.html");
+// //para login
+// if(empty($user['loginUse'])){
+
+// }
+
+
+
 ?>
