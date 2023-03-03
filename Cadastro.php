@@ -27,21 +27,21 @@ include_once('./database/conexao.php');
         <form name="signIn" method="POST" action="./src/controllers/user/UserController.php">
             <label>Nome: </label>
             <br>
-            <input type="text" name="name" placeholder="Nome completo" required>
+            <input type="text" name="name" placeholder="Nome completo" required/>
             <br>
             <br><label>E-mail: </label>
             <br>
-            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="email" name="email" placeholder="E-mail" required/>
             <br>
             <br><label>Senha: </label>
             <br>
-            <input type="password" name="password" placeholder="No mínimo 8 caracteres" minlength="8" required>
+            <input type="password" name="password" placeholder="No mínimo 8 caracteres" minlength="8" required/>
             <br><br>
-            <input type="radio" required/> Ao cadastrar você irá concordar com a nossa <a href="">politica de dados</a>
+            <b> Ao cadastrar você irá concordar com a nossa <a href="">politica de dados</a> </b>
             <br><br>
             <input type="submit" value="Cadastre-se" name="createdUser">
         </form>
-        <p>Já tem Cadastro?, <a href="login.php">Clique para o Login</a></p>
+        <h3>Já tem Cadastro?, <a href="login.php">Clique para o Login</a></h3>
     </div>
 </body>
 
