@@ -9,7 +9,7 @@ include_once('./database/conexao.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metal Coins</title>
+    <title>Cadastro MetalCoins</title>
 </head>
 
 <body>
@@ -17,9 +17,6 @@ include_once('./database/conexao.php');
     <nav>
         <div class="topnav">
             <a href="index.html">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
           </div>
     </nav>
 
@@ -38,8 +35,10 @@ include_once('./database/conexao.php');
             <br>
             <br><label>Senha: </label>
             <br>
-            <input type="password" name="password" placeholder="No mínimo 8 caracteres" minlength="8" required></br>
-            <br>
+            <input type="password" name="password" placeholder="No mínimo 8 caracteres" minlength="8" required>
+            <br><br>
+            <input type="radio" required/> Ao cadastrar você irá concordar com a nossa <a href="">politica de dados</a>
+            <br><br>
             <input type="submit" value="Cadastre-se" name="createdUser">
         </form>
         <p>Já tem Cadastro?, <a href="login.php">Clique para o Login</a></p>
