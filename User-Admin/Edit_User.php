@@ -53,24 +53,16 @@ if (!empty($_GET['id'])) {
             <div class="form-group form-row">
                 <label>Nome:</label>
                 <div class="col-4">
-                    <input type="text" name="name" class="form-control" placeholder="Nome completo" required
-                        autocomplete="off" />
+                    <input type="text" name="name" class="form-control" placeholder="Nome completo"
+                        value="<?php echo $nome; ?>" required autocomplete="off" />
                 </div>
             </div>
             <br>
             <div class="form-group form-row">
                 <label>E-mail:</label>
                 <div class="col-4">
-                    <input type="email" name="email" class="form-control" placeholder="Digite seu E-mail" value="<?php echo $nome; ?>"
-                        required autocomplete="off" />
-                </div>
-            </div>
-            <br>
-            <div class="form-group form-row">
-                <label>Senha:</label>
-                <div class="col-4">
-                    <input type="password" name="password" class="form-control" placeholder="Crie sua senha"
-                        minlength="8" required />
+                    <input type="email" name="email" class="form-control" placeholder="Digite seu E-mail"
+                        value="<?php echo $email; ?>" required autocomplete="off" />
                 </div>
             </div>
             <br>
