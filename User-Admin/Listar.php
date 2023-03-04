@@ -1,5 +1,5 @@
 <?php
-include_once('./database/conexao.php');
+include_once('../database/conexao.php');
 ?>
 
 <!DOCTYPE html>
@@ -61,8 +61,8 @@ include_once('./database/conexao.php');
                             echo "<td> $nome </td>";
                             echo "<td> $email </td>";
                             echo "<td>  </td>";
-                            echo "<td><button>Editar</button></td>";
-                            echo "<td><button>Excluir</button></td>";
+                            echo "<td><a class='btn btn-primary' href='Edit_User.php?id=$id'>Editar</a></td>";
+                            echo "<td><button class='btn btn-secondary' href='Delete_User.php?id=$id'>Excluir</button></td>";
                             echo "</tr>";
                         }
                     } else {
