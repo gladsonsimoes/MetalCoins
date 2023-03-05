@@ -45,7 +45,7 @@ include_once('./database/conexao.php');
                 </div>
             </div>
             <br>
-            <input type="submit" value="Entrar" name="loginUser">
+            <button type="submit" name="loginUser"> Entrar </button>
         </form>
         <br>
         <h3>Se for novo, <a href="Cadastro.php">Faça o Cadastro e receba 100 MetalCoins </a></h3>
