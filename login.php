@@ -1,5 +1,6 @@
 <?php
 include_once('./database/conexao.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ include_once('./database/conexao.php');
     <header>
         <!-- NavBar -->
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">MetalCoins</a>
+            <a class="navbar-brand" href="index.php">MetalCoins</a>
         </nav>
     </header>
     <br>
@@ -28,12 +29,12 @@ include_once('./database/conexao.php');
     <div class="container">
         <h3>Login Usuário</h3>
         <br>
-        <form name="signIn" method="POST" action="./src/controllers/user/UserController.php">
+        <form name="signIn" method="POST" action="./src/controllers/user/LoginConnect.php">
             <div class="form-group form-row">
                 <label>E-mail:</label>
                 <div class="col-4">
-                    <input type="email" name="email" class="form-control" placeholder="Digite seu E-mail" required
-                        autocomplete="off" />
+                    <input type="email" name="login" class="form-control" placeholder="Digite seu E-mail" required
+                        autocomplete="on" />
                 </div>
             </div>
             <br>
@@ -41,7 +42,7 @@ include_once('./database/conexao.php');
                 <label>Senha:</label>
                 <div class="col-4">
                     <input type="password" name="password" class="form-control" placeholder="Crie sua senha"
-                        minlength="8" required />
+                        minlength="8" required autocomplete="on" />
                 </div>
             </div>
             <br>

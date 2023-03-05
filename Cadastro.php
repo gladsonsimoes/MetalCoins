@@ -19,7 +19,7 @@ include_once('./database/conexao.php');
     <header>
         <!-- NavBar -->
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">MetalCoins</a>
+            <a class="navbar-brand" href="index.php">MetalCoins</a>
         </nav>
     </header>
     <br>
