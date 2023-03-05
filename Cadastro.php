@@ -55,7 +55,7 @@ include_once('./database/conexao.php');
             <br>
             <b> Ao cadastrar você irá concordar com a nossa <a href="">politica de dados</a> </b>
             <br><br>
-            <input type="submit" name="createdUser">Cadastre-se</button>
+            <button type="submit" name="createdUser">Cadastre-se</button>
         </form>
         <div>
             <br>
