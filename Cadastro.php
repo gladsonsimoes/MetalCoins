@@ -59,7 +59,7 @@ include_once('./database/conexao.php');
         </form>
         <div>
             <br>
-            <h3>Já tem Cadastro? <a href="login.php">Clique para o Login</a></h3>
+            <h3>Já possui uma conta? <a href="login.php">Sign in</a></h3>
         </div>
 </body>
 

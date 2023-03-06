@@ -46,6 +46,9 @@ include_once('./database/conexao.php');
                 </div>
             </div>
             <br>
+            <b>Esqueceu a senha? <a href="">To alter</a></b>
+            <br>
+            <br>
             <input type="submit" value="Entrar" name="loginUser">
         </form>
         <br>
