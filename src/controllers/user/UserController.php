@@ -20,7 +20,7 @@ if (empty($user['createdUse'])) {
     } else if (!filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
         $empty_input = true;
         echo "<script type='text/javascript'>
-        alert('Digite  Digite um E-mail válido !');
+        alert('Digite um E-mail válido !');
         window.location.href='../../../Cadastro.php';
       </script>";
         // echo "<p style='color: red;'> Digite um E-mail válido </p>";

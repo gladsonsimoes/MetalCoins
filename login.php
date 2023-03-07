@@ -16,22 +16,17 @@ include_once('./database/conexao.php');
 </head>
 
 <body>
-    <!-- NavBar -->
-    <header>
-        <!-- NavBar -->
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.php">MetalCoins</a>
-        </nav>
-    </header>
     <br>
-
     <!-- Conteudo da Página -->
-    <div class="container">
-        <h3>Login Usuário</h3>
+    <div class="container" align="center">
+        <div id="tituloMetalCoins">
+            <h1>Metal Coins</h1>
+        </div>
+        <br>
+        <h3>Fazer Login</h3>
         <br>
         <form name="signIn" method="POST" action="./src/controllers/user/LoginConnect.php">
             <div class="form-group form-row">
-                <label>E-mail:</label>
                 <div class="col-4">
                     <input type="email" name="login" class="form-control" placeholder="Digite seu E-mail" required
                         autocomplete="on" />
@@ -39,9 +34,8 @@ include_once('./database/conexao.php');
             </div>
             <br>
             <div class="form-group form-row">
-                <label>Senha:</label>
                 <div class="col-4">
-                    <input type="password" name="password" class="form-control" placeholder="Crie sua senha"
+                    <input type="password" name="password" class="form-control" placeholder="Digite sua senha"
                         minlength="8" required autocomplete="on" />
                 </div>
             </div>
@@ -49,10 +43,10 @@ include_once('./database/conexao.php');
             <b>Esqueceu a senha? <a href="">To alter</a></b>
             <br>
             <br>
-            <input type="submit" value="Entrar" name="loginUser">
+            <input type="submit" value="Login" name="loginUser">
         </form>
         <br>
-        <h3>Se for novo, <a href="Cadastro.php">Faça o Cadastro e receba 100 MetalCoins </a></h3>
+        <h4>Se for novo, <a href="Cadastro.php">Faça o Cadastro e receba 100 MetalCoins </a></h4>
     </div>
 </body>
 
