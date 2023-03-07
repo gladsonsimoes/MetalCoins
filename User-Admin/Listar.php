@@ -15,6 +15,19 @@ include_once('../database/conexao.php');
 </head>
 
 <body>
+    <header>
+        <!-- NavBar -->
+        <header>
+            <!-- NavBar -->
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.html">MetalCoins</a>
+            </nav>
+        </header>
+        <br>
+
+    </header>
+
+
     <div class="container">
         <br>
         <h1 align="center">Lista de Usuários </h1><br><br>
@@ -52,7 +65,7 @@ include_once('../database/conexao.php');
                     $result = $conn->prepare($queryUser);
                     $result->execute();
 
-                    if (($result) and ($result->rowCount() != 0)) {
+                    if (($result) and ($result->rowCount() > 0)) {
                         while ($row_usuario = $result->fetch(PDO::FETCH_ASSOC)) {
                             extract($row_usuario);
                             echo "<tr>";
