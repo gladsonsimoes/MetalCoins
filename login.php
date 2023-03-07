@@ -28,14 +28,14 @@ include_once('./database/conexao.php');
         <form name="signIn" method="POST" action="./src/controllers/user/LoginConnect.php">
             <div class="form-group form-row">
                 <div class="col-4">
-                    <input type="email" name="login" class="form-control" placeholder="Digite seu E-mail" required
+                    <input type="email" name="login" class="form-control rounded-pill " placeholder="Digite seu E-mail " required
                         autocomplete="on" />
                 </div>
             </div>
             <br>
             <div class="form-group form-row">
                 <div class="col-4">
-                    <input type="password" name="password" class="form-control" placeholder="Digite sua senha"
+                    <input type="password" name="password" class=" form-control rounded-pill" placeholder="Digite sua senha"
                         minlength="8" required autocomplete="on" />
                 </div>
             </div>
