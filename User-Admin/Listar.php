@@ -75,11 +75,11 @@ include_once('../database/conexao.php');
                             echo "<td> $email </td>";
                             echo "<td>  </td>";
                             echo "<td><a class='btn btn-primary' href='Edit_User.php?id=$id'>Editar</a></td>";
-                            echo "<td><button class='btn btn-secondary' href='Delete_User.php?id=$id'>Excluir</button></td>";
+                            echo "<td><a class='btn btn-secondary' href='Excluir_User.php?id=$id'>Excluir</a></td>";
                             echo "</tr>";
                         }
                     } else {
-                        echo "404 Not Found , Conteudo Não disponível!";
+                        echo "Erro com Banco de Dados";
                     }
                     ?>
                 </tbody>

@@ -30,22 +30,22 @@ include_once('./database/conexao.php');
         <br>
         <form name="signIn" method="post" action="./src/controllers/user/UserController.php">
             <div class="form-group form-row">
-                <div class="col-4">
-                    <input type="text" name="name" class="form-control" placeholder="Nome" required
+                <div class="col-3">
+                    <input type="text" name="name" class="form-control rounded-pill" placeholder="Nome" required
                         autocomplete="off" />
                 </div>
             </div>
             <br>
             <div class="form-group form-row">
-                <div class="col-4">
-                    <input type="email" name="email" class="form-control" placeholder="E-mail" required
+                <div class="col-3">
+                    <input type="email" name="email" class="form-control rounded-pill" placeholder="E-mail" required
                         autocomplete="off" />
                 </div>
             </div>
             <br>
             <div class="form-group form-row">
-                <div class="col-4">
-                    <input type="password" name="password" class="form-control" placeholder="Crie sua senha"
+                <div class="col-3">
+                    <input type="password" name="password" class="form-control rounded-pill" placeholder="Crie sua senha"
                         minlength="8" required />
                 </div>
             </div>
