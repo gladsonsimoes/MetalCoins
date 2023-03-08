@@ -41,7 +41,7 @@ include_once('./database/conexao.php');
             <div class="form-group form-row">
                 <label>Senha:</label>
                 <div class="col-4">
-                    <input type="password" name="password" class="form-control" placeholder="Crie sua senha"
+                    <input type="password" name="password" class="form-control" placeholder="Digite sua senha"
                         minlength="8" required autocomplete="on" />
                 </div>
             </div>
