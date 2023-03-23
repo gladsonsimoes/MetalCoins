@@ -10,13 +10,11 @@ if (!empty($_GET['id'])) {
 
     $count_rows = $edit->rowCount();
 
-    //verificar se tem na tabela e imprimir nos input
     if ($count_rows > 0) {
-        // while ($user = PDO::FETCH_ASSOC) {
-        //     $nome = $user['nome'];
-        //     $email = $user['email'];
-        //     $senha = $user['password'];
-        // }
+        while ($user = $edit->fetch(PDO::FETCH_ASSOC)) {
+            $nome = $user['nome'];
+            $email = $user['email'];
+        }
     } else {
         header("Location: Listar.php");
     }
