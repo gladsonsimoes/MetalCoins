@@ -13,8 +13,11 @@ if (!empty($_GET['id'])) {
     if ($count_rows > 0) {
         $deleteSQL = $conn->prepare("DELETE FROM usuarios WHERE id=$id");
         $deleteSQL->execute();
-    } 
 
-    header("Location: Listar.php");  
+        echo "<script>
+        alert('Usuário Excluído!');
+        window.location.href='Listar.php';
+         </script>";
+    }
 }
 ?>
