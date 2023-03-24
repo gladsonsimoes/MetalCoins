@@ -5,7 +5,7 @@ $login = $_POST['login'];
 $senha = $_POST['password'];
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-if (empty($user['loginUser'])) {
+if (!empty($user['loginUser'])) {
 
     $queryUser = ("SELECT * FROM usuarios WHERE email='$login' , senha='$senha' ") or die("erro ao selecionar");
     $result = $conn->prepare($queryUser);
