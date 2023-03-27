@@ -24,6 +24,7 @@ if (empty($user['createdUse'])) {
       </script>";
   }
 
+  
   //se empty_input for false , inserir dados no banco de dados
   if (!$empty_input) {
     //se cadastro já tiver o email parecido ignorar o email
