@@ -24,7 +24,6 @@ if (empty($user['createdUse'])) {
       </script>";
   }
 
-  
   //se empty_input for false , inserir dados no banco de dados
   if (!$empty_input) {
     //se cadastro já tiver o email parecido ignorar o email
@@ -35,15 +34,15 @@ if (empty($user['createdUse'])) {
 
     if ($result > 0) {
       echo ("<script type='text/javascript'>
-      alert('E-mail já cadastrado! ');
-      window.location.href='../../../Cadastro.php';
-    </script>");
-    } 
+    alert('E-mail já cadastrado! ');
+    window.location.href='../../../Cadastro.php';
+  </script>");
+    }
     //senao se nao tiver cadastrar!
-     else {
+    else {
 
       $queryUser = " INSERT INTO usuarios (nome, email, senha) VALUES 
-     ('" . $user['name'] .
+   ('" . $user['name'] .
         "','" . $user['email'] .
         "','" . $user['password'] . "'); ";
 
@@ -51,15 +50,17 @@ if (empty($user['createdUse'])) {
 
       if ($signedUser->execute()) {
         echo "<script type='text/javascript'>
-          alert('Cadastro Realizado com Sucesso! ');
-          window.location.href='../../../index.php';
-        </script>";
+        alert('Cadastro Realizado com Sucesso! ');
+        window.location.href='../../../index.php';
+      </script>";
       }
-     
 
     }
   }
 }
+
+
+
 
 //validacao para conta admin e cliente
 // if (!empty($id_perfil)) {

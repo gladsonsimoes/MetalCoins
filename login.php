@@ -35,6 +35,7 @@ include_once('./database/conexao.php');
             <br>
             <div class="form-group form-row">
                 <div class="col-4">
+
                     <input type="password" name="password" class=" form-control rounded-pill" placeholder="Digite sua senha"
 
                         minlength="8" required autocomplete="on" />
