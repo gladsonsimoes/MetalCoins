@@ -26,21 +26,41 @@ if (empty($user['createdUse'])) {
 
   //se empty_input for false , inserir dados no banco de dados
   if (!$empty_input) {
-    $queryUser = " INSERT INTO usuarios (nome, email, senha) VALUES 
-('" . $user['name'] .
-      "','" . $user['email'] .
-      "','" . $user['password'] . "'); ";
+    //se cadastro já tiver o email parecido ignorar o email
+    $query = "SELECT * FROM usuarios WHERE email='" . $user['email'] . "'";
+    $checkingUser = $conn->prepare($query);
+    $checkingUser->execute($user[`email`]);
+    $result = $checkingUser->rowCount();
 
-    $signedUser = $conn->prepare($queryUser);
+    if ($result > 0) {
+      echo ("<script type='text/javascript'>
+    alert('E-mail já cadastrado! ');
+    window.location.href='../../../Cadastro.php';
+  </script>");
+    }
+    //senao se nao tiver cadastrar!
+    else {
 
-    $signedUser->execute();
+      $queryUser = " INSERT INTO usuarios (nome, email, senha) VALUES 
+   ('" . $user['name'] .
+        "','" . $user['email'] .
+        "','" . $user['password'] . "'); ";
 
-    echo "<script type='text/javascript'>
-          alert('Cadastro Realizado com Sucesso! ');
-          window.location.href='../../../index.php';
-        </script>";
+      $signedUser = $conn->prepare($queryUser);
+
+      if ($signedUser->execute()) {
+        echo "<script type='text/javascript'>
+        alert('Cadastro Realizado com Sucesso! ');
+        window.location.href='../../../index.php';
+      </script>";
+      }
+
+    }
   }
 }
+
+
+
 
 //validacao para conta admin e cliente
 // if (!empty($id_perfil)) {
