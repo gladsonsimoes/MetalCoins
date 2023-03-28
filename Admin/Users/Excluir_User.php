@@ -1,5 +1,5 @@
 <?php
-include_once('../database/conexao.php');
+include_once('../../database/conexao.php');
 
 if (!empty($_GET['id'])) {
 

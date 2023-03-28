@@ -1,5 +1,5 @@
 <?php
-include_once('../database/conexao.php');
+include_once('../../database/conexao.php');
 
 // $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $id = $_POST['id'];
