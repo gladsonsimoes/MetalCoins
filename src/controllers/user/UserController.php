@@ -38,7 +38,7 @@ if (empty($user['createdUse'])) {
     window.location.href='../../../Cadastro.php';
   </script>");
     }
-    //senao se nao tiver cadastrar!
+    //senao se nao tiver, cadastrar!
     else {
 
       $queryUser = " INSERT INTO usuarios (nome, email, senha) VALUES 
@@ -46,9 +46,14 @@ if (empty($user['createdUse'])) {
         "','" . $user['email'] .
         "','" . $user['password'] . "'); ";
 
-      $signedUser = $conn->prepare($queryUser);
+        
+      //Adicionar 100 metalcoins ao cadastrar
+      $queryMetalcoin = "INSERT INTO metalcoins (coins) VALUES (100);";
 
-      if ($signedUser->execute()) {
+      $signedUser = $conn->prepare($queryUser);
+      $addCoins = $conn->prepare($queryMetalcoin);
+
+      if ($signedUser & $addCoins ->execute()) {
         echo "<script type='text/javascript'>
         alert('Cadastro Realizado com Sucesso! ');
         window.location.href='../../../index.php';
