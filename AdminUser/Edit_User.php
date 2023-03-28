@@ -19,7 +19,6 @@ if (!empty($_GET['id'])) {
         header("Location: Listar.php");
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -47,11 +46,11 @@ if (!empty($_GET['id'])) {
     <div class="container">
         <h3>Editar Usuário</h3>
         <br>
-        <form name="signIn" method="post" action="./src/controllers/user/UserController.php">
+        <form name="signIn" method="post" action="UserEdit.php">
             <div class="form-group form-row">
                 <label>Nome:</label>
                 <div class="col-4">
-                    <input type="text" name="name" class="form-control" placeholder="Nome completo"
+                    <input type="text" name="nome" class="form-control" placeholder="Nome completo"
                         value="<?php echo $nome; ?>" required autocomplete="off" />
                 </div>
             </div>
@@ -64,11 +63,14 @@ if (!empty($_GET['id'])) {
                 </div>
             </div>
             <br>
+
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+          
             <input type="submit" value="Editar" name="EditUser">
         </form>
         <div>
             <br>
-            <h3><a href="Listar.php">Voltar para a tabela</a></h3>
+            <h3><a href="Tabela.php">Voltar para a tabela</a></h3>
         </div>
 </body>
 
