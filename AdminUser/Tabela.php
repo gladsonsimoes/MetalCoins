@@ -61,6 +61,8 @@ include_once('../database/conexao.php');
                 <!-- Listar Conteudo da Tabela -->
                 <tbody>
                     <?php
+                    // $queryMetalCoins = "SELECT * FROM metalcoins LIMIT $inicio, $limite_result";
+            
                     $queryUser = "SELECT * FROM usuarios LIMIT $inicio, $limite_result";
                     $result = $conn->prepare($queryUser);
                     $result->execute();
