@@ -1,14 +1,15 @@
 <?php
-// include_once('./database/conexao.php');
-//   $login_cookie = $_COOKIE['login'];
-//     if(isset($login_cookie)){
-//       echo"Bem-Vindo, $login_cookie <br>";
-//       echo"Essas informações <font color='red'>PODEM</font> ser acessadas por você";
-//     }else{
-//       echo"Bem-Vindo, convidado <br>";
-//       echo"Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você";
-//       echo"<br><a href='login.php'>Faça Login</a> Para ler o conteúdo";
-//     }
+include_once('../database/conexao.php');
+
+  $login_cookie = $_COOKIE['login'];
+    if(isset($login_cookie)){
+      echo"Bem-Vindo, $login_cookie <br>";
+      echo"Essas informações <font color='red'>PODEM</font> ser acessadas por você";
+    }else{
+      echo"Bem-Vindo, convidado <br>";
+      echo"Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você";
+      echo"<br><a href='login.php'>Faça Login</a> Para ler o conteúdo";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +34,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link" href="login.php">login</a>
+                <a class="nav-item nav-link" href="login.php">Bem-vindo Fulano</a>
               </div>
             </div>
           </nav>
