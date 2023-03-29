@@ -1,5 +1,5 @@
 <?php
-include_once('./database/conexao.php');
+include_once('../../database/conexao.php');
 
 ?>
 
@@ -21,15 +21,15 @@ include_once('./database/conexao.php');
     <br>
 
     <!-- Conteudo da página -->
-    <div class="container" align="center">
+    <div class="container" text-align="center">
         <div id="tituloMetalCoins">
             <h1>Metal Coins</h1>
         </div>
-        <br>
+        <br>    
         <h3>Cadastre-se</h3>
         <br>
-        <form name="signIn" method="post" action="./src/controllers/user/UserController.php">
-            <div class="form-group form-row">
+        <form name="signIn" method="post" action="../controllers/user/UserController.php">
+            <div class="form-group form-row" >
                 <div class="col-3">
                     <input type="text" name="name" class="form-control rounded-pill" placeholder="Nome" required
                         autocomplete="off" />
@@ -56,7 +56,7 @@ include_once('./database/conexao.php');
         </form>
         <div>
             <br>
-            <h3>Já possui uma conta? <a href="login.php">Sign in</a></h3>
+            <h4>Já possui uma conta? <a href="login.php">Sign in</a></h4>
         </div>
 </body>
 

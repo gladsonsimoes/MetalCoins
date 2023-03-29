@@ -1,5 +1,5 @@
 <?php
-include_once('./database/conexao.php');
+include_once('../../database/conexao.php');
 
 ?>
 
@@ -25,10 +25,10 @@ include_once('./database/conexao.php');
         <br>
         <h3>Fazer Login</h3>
         <br>
-        <form name="signIn" method="POST" action="./src/controllers/user/LoginConnect.php">
+        <form name="signIn" method="POST" action="../controllers/user/LoginConnect.php">
             <div class="form-group form-row">
                 <div class="col-4">
-                    <input type="email" name="login" class="form-control rounded-pill " placeholder="Digite seu E-mail " required
+                    <input type="email" name="email" class="form-control rounded-pill " placeholder="Digite seu E-mail " required
                         autocomplete="on" />
                 </div>
             </div>
@@ -41,13 +41,11 @@ include_once('./database/conexao.php');
                 </div>
             </div>
             <br>
-            <b>Esqueceu a senha? <a href="">To alter</a></b>
-            <br>
-            <br>
-            <input type="submit" value="Login" name="loginUser">
+            <input type="submit" value="Entrar" name="loginUser">
         </form>
         <br>
-        <h4>Se for novo, <a href="Cadastro.php">Faça o Cadastro e receba 100 MetalCoins </a></h4>
+        <h4>Não tem uma conta? <a href="Cadastro.php">Cadastre-se</a></h4>
+        <b><a href="">Esqueceu a senha? </a></b>
     </div>
 </body>
 

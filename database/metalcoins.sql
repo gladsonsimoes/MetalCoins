@@ -15,6 +15,10 @@ CREATE TABLE usuarios
  senha VARCHAR(45) NOT NULL 
 ); 
 
+CREATE TABLE metalcoins 
+(
+  metalcoins FLOAT NOT NULL
+);
 
 CREATE TABLE produto 
 ( 
@@ -23,6 +27,8 @@ CREATE TABLE produto
  preco FLOAT NOT NULL,  
  estoque INT NOT NULL
 ); 
+
+
 
 CREATE TABLE conta_corrente 
 ( 

@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "123456";
 $dbname = "metalcoin";
 $port = 3306;
 
