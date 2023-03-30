@@ -15,11 +15,6 @@ CREATE TABLE usuarios
  senha VARCHAR(45) NOT NULL 
 ); 
 
-CREATE TABLE metalcoins 
-(
-  metalcoins FLOAT NOT NULL
-);
-
 CREATE TABLE produto 
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
@@ -29,32 +24,30 @@ CREATE TABLE produto
 ); 
 
 
-
 CREATE TABLE conta_corrente 
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
- idUsuario INT,  
- Saldo FLOAT NOT NULL,  
- Transacao VARCHAR(45) NOT NULL,  
- DataTransacao DATE NOT NULL  
+ id_usuario INT,  
+ saldo FLOAT NOT NULL,  
+ transacao VARCHAR(45) NOT NULL,  
+ data_transacao DATE NOT NULL  
 ); 
 
 CREATE TABLE pedido 
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
- idProduto INT,  
+ id_produto INT,  
  quantidadeProduto INT NOT NULL,  
- idUsuario INT,  
+ id_usuario INT,  
  status VARCHAR(45) NOT NULL,  
  dataPedido DATE NOT NULL ,
  valorPedido FLOAT NOT NULL
 ); 
 
-ALTER TABLE usuarios ADD FOREIGN KEY(id_perfil) REFERENCES perfil (tipo_De_Usuario);
+ALTER TABLE usuarios ADD FOREIGN KEY(id_perfil) REFERENCES perfil (tipo_de_usuario);
 
-ALTER TABLE conta_corrente ADD FOREIGN KEY(idUsuario) REFERENCES usuario (id);
+ALTER TABLE conta_corrente ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);
 
 ALTER TABLE pedido ADD FOREIGN KEY(id_produto) REFERENCES produto (id);
 
-ALTER TABLE pedido ADD FOREIGN KEY(idUsuario) REFERENCES usuario (id);   
-   
+ALTER TABLE pedido ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);   
