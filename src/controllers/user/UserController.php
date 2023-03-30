@@ -6,21 +6,6 @@ $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if (!empty($user['createdUser'])) {
   $empty_input = false;
-  /*
-  $user = array_map('trim', $user);
-  if (in_array("", $user)) {
-  $empty_input = true;
-  echo "<script type='text/javascript'>
-  alert('Digite os campos corretamente e tente novamente!');
-  window.location.href='../../../Cadastro.php';
-  </script>";
-  } else if (!filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
-  $empty_input = true;
-  echo "<script type='text/javascript'>
-  alert('Digite um E-mail válido !');
-  window.location.href='../../../Cadastro.php';
-  </script>";
-  }*/
   //se empty_input for false , inserir dados no banco de dados
   if (!$empty_input) {
     //se cadastro já tiver o email parecido ignorar o email
@@ -37,23 +22,25 @@ if (!empty($user['createdUser'])) {
     }
     //senao tiver, cadastrar!
     else {
-      $date = date('d/m/Y');
+      $date = date('Y-m-d H:i:s');
       $queryUser =
         "INSERT INTO usuarios (nome, email, senha)
       VALUES ('{$user['name']}', '{$user['email']}', '{$user['password']}');";
-      
+
       $signedUser = $conn->prepare($queryUser);
+      $signed = $signedUser->execute();
 
-      #$user_id = $conn->lastInsertId();
-     # var_dump($user_id);
-
-      /* $signed = $signedUser->execute();
       if ($signed) {
-      echo "<script type='text/javascript'>
+        $user_id = $conn->lastInsertId();
+        $insertCoins = "INSERT INTO conta_corrente (id_usuario, saldo, transacao, data_transacao)
+        VALUES ('" . $user_id . "', 100, 'Recompensa por cadastro!', '" . $date . "');";
+        $inserting = $conn->prepare($insertCoins);
+        $inserted = $inserting->execute();
+        echo "<script type='text/javascript'>
       alert('Cadastro Realizado com Sucesso! ');
       window.location.href='../../../index.php';
       </script>";
-            }*/
+      }
     }
   }
 }
