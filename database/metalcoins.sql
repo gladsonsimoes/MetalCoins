@@ -3,7 +3,8 @@ use metalcoin;
 
 CREATE TABLE perfil 
 ( 
- tipo_de_usuario INT PRIMARY KEY
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ tipo_de_usuario VARCHAR(45) NOT NULL
 ); 
 
 CREATE TABLE usuarios
@@ -44,10 +45,13 @@ CREATE TABLE pedido
  valorPedido FLOAT NOT NULL
 ); 
 
-ALTER TABLE usuarios ADD FOREIGN KEY(id_perfil) REFERENCES perfil (tipo_de_usuario);
+ALTER TABLE usuarios ADD FOREIGN KEY(id_perfil) REFERENCES perfil (id);
 
 ALTER TABLE conta_corrente ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);
 
 ALTER TABLE pedido ADD FOREIGN KEY(id_produto) REFERENCES produto (id);
 
 ALTER TABLE pedido ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);   
+
+INSERT INTO perfil (tipo_de_usuario) VALUES ('admin');
+INSERT INTO perfil (tipo_de_usuario) VALUES ('common');
