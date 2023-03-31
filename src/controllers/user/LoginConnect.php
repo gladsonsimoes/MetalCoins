@@ -6,23 +6,24 @@ $senha = $_POST['password'];
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if (!empty($user['loginUser'])) {
-  $queryUser = "SELECT * FROM usuarios WHERE (email='" . $user['email'] . "') AND (senha='" . $user['password'] . "'); ";
+  $queryUser = "SELECT * FROM usuarios WHERE (email='" . $user['email'] . "');";
   $result = $conn->prepare($queryUser);
   $result->execute() or die();
-  $rows = $result->rowCount();
-
-  if ($rows > 0) {
+  $row = $result->rowCount();
+  $data = $result->fetch();
+  $hash = $data['senha'];
+  if ($row == 1 && password_verify($user['password'], $hash)) {
+    echo ($decypher);
     setcookie('login', $login);
     echo "<script>
           alert('Logado com Sucesso!');
         </script>";
-    header("Location: ../../../index.php");
-
+    header("Location: ../../views/conta.php");
   } else {
     echo "<script>
-          alert('Login e/ou senha incorretos');
-          window.location.href='../../view/Login.php';
-        </script>";
+   alert('Login e/ou senha incorretos');
+   window.location.href='../../views/Login.php';
+   </script>";
   }
 }
 
