@@ -47,7 +47,7 @@ include_once('../../database/conexao.php');
 
         <br>
     <br>
-            <form name="signIn" method="POST" action="../controllers/user/LoginConnect.php">
+            <form id="signIn" method="POST" action="../controllers/user/LoginConnect.php">
             <div class="form-group form-row">
                 <div class="col-9">
                     <input type="email" name="email" class="form-control rounded-pill ex3" placeholder="E-mail:" required
@@ -62,7 +62,7 @@ include_once('../../database/conexao.php');
                 </div>
             </div>
             
-           <a href="conta.php"><input style="background-color: #332E51;" type="submit" value="Login" name="createdUser" class="btn btn-dark btn-lg rounded-pill ex"></a>
+           <a href="conta.php"><input style="background-color: #332E51;" type="submit" value="Login" name="loginUser" class="btn btn-dark btn-lg rounded-pill ex"></a>
             </form>
             
         </form>

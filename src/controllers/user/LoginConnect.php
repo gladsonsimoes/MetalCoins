@@ -1,6 +1,7 @@
 <?php
 include_once('../../../database/conexao.php');
 
+session_start();
 $login = $_POST['email'];
 $senha = $_POST['password'];
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -13,7 +14,9 @@ if (!empty($user['loginUser'])) {
   $data = $result->fetch();
   $hash = $data['senha'];
   if ($row == 1 && password_verify($user['password'], $hash)) {
-    echo ($decypher);
+    $token = uniqid() . '_' . $user['id'] . '_' . $user['id_perfil'];
+    echo($token);
+    $_SESSION["token"] = $token;
     setcookie('login', $login);
     echo "<script>
           alert('Logado com Sucesso!');
