@@ -7,7 +7,7 @@ $login_cookie = $_COOKIE['login'];
     }else{
       echo"Bem-Vindo, convidado <br>";
       echo"Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você";
-      echo"<br><a href='src/view/login.php'>Faça Login</a> Para ler o conteúdo";
+      echo"<br><a href='src/views/login.php'>Faça Login</a> Para ler o conteúdo";
     }
 ?>
 
@@ -33,7 +33,7 @@ $login_cookie = $_COOKIE['login'];
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link" href="src/view/login.php">Acesse sua conta</a>
+                <a class="nav-item nav-link" href="src/views/login.php">Acesse sua conta</a>
               </div>
             </div>
           </nav>

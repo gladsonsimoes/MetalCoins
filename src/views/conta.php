@@ -1,5 +1,5 @@
 <?php
-include_once('../controllers/clientUser/conta/conta.php');
+include_once('../../database/conexao.php');
 
 ?>
 <!DOCTYPE html>
