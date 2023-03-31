@@ -22,10 +22,15 @@ if (!empty($user['createdUser'])) {
     }
     //senao tiver, cadastrar!
     else {
+      $options = [
+        'cost'  => 10
+      ];
+      $hashedPass = password_hash($user['password'], PASSWORD_DEFAULT, $options);
+
       $date = date('Y-m-d H:i:s');
       $queryUser =
         "INSERT INTO usuarios (nome, email, senha, id_perfil)
-      VALUES ('{$user['name']}', '{$user['email']}', '{$user['password']}', 2);";
+      VALUES ('{$user['name']}', '{$user['email']}', '{$hashedPass}', 2);";
 
       $signedUser = $conn->prepare($queryUser);
       $signed = $signedUser->execute();
@@ -38,7 +43,7 @@ if (!empty($user['createdUser'])) {
         $inserted = $inserting->execute();
         echo "<script type='text/javascript'>
       alert('Cadastro Realizado com Sucesso! ');
-      window.location.href='../../../index.php';
+      window.location.href='../../views/conta.php';
       </script>";
       }
     }
