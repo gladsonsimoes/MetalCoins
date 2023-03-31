@@ -17,15 +17,15 @@ if (!empty($user['createdUser'])) {
     if ($result > 0) {
       echo ("<script type='text/javascript'>
     alert('E-mail já cadastrado! ');
-    window.location.href='../../view/Cadastro.php';
+    window.location.href='../../views/Cadastro.php';
   </script>");
     }
     //senao tiver, cadastrar!
     else {
       $date = date('Y-m-d H:i:s');
       $queryUser =
-        "INSERT INTO usuarios (nome, email, senha)
-      VALUES ('{$user['name']}', '{$user['email']}', '{$user['password']}');";
+        "INSERT INTO usuarios (nome, email, senha, id_perfil)
+      VALUES ('{$user['name']}', '{$user['email']}', '{$user['password']}', 2);";
 
       $signedUser = $conn->prepare($queryUser);
       $signed = $signedUser->execute();
