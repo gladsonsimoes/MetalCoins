@@ -29,7 +29,7 @@ include_once('../../database/conexao.php');
 <body style="background: #2E0A5B;">
     <h3 class="tituloU">Olá, João Lindão</h3>
     <span>
-        <button class="iconeUsuario"></button>
+        <a href="Principal.html"><button class="iconeUsuario"></button></a>
     </span>
 
     <div class="borda1">
