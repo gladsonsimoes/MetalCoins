@@ -55,3 +55,9 @@ ALTER TABLE pedido ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);
 
 INSERT INTO perfil (tipo_de_usuario) VALUES ('admin');
 INSERT INTO perfil (tipo_de_usuario) VALUES ('common');
+
+use metalcoin;
+select *from usuarios;
+
+alter table usuarios modify login varchar(30) not null unique;
+alter table usuarios modify senha varchar(30) not null;
