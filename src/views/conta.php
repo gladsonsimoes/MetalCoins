@@ -1,6 +1,7 @@
 <?php
 include_once('../../database/conexao.php');
-
+include('../controllers/Acess/protected.php');
+include('../controllers/clientUser/conta/conta.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -27,19 +28,36 @@ include_once('../../database/conexao.php');
 </head>
 
 <body style="background: #2E0A5B;">
-    <h3 class="tituloU">Olá, João Lindão</h3>
+    <h3 class="tituloU">Olá,
+        <?php echo $data['nome']; ?>
+    </h3>
     <span>
-        <a href="Principal.html"><button class="iconeUsuario"></button></a>
+        <a href="principal.php"><button class="iconeUsuario"></button></a>
     </span>
 
     <div class="borda1">
-        <h1 class="saldoT">Conta</h1>
+        <h1 class="saldoT">MetalCoins</h1>
         <h1 class="saldoD">Saldo Disponivel</h1>
-        <h1 class="valorT">10.000</h1>
+        <h1 class="valorT">
+            <?php echo $data['saldo'] ?>
+        </h1>
     </div>
     <div class="borda2">
+        <h1 class="saldoT">Conta</h1>
+        <br>
+        <br>
+        <h1>
+            <?php echo $data['nome'] ?>
+        </h1>
+        <h1>
+            <?php echo $data['email'] ?>
+        </h1>
     </div>
+
     <div class="borda3">
+        <h1 class="saldoT">Transações</h1>
+        <h1 class="valorT">
+            <?php echo $data['transacao'] ?>
     </div>
 
     <script type="text/javascript" src="../js/vanilla-tilt.js"></script>

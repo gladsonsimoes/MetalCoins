@@ -1,6 +1,8 @@
 <?php
 include_once('../../../database/conexao.php');
-function registerUser($user) {
+$user_id = $_GET['id'];
+function registerUser($user)
+{
   global $conn;
   $empty_input = false;
 
@@ -38,6 +40,21 @@ function registerUser($user) {
       window.location.href='../../views/login.php';
       </script>";
     }
+  }
+}
+
+function getUserById($user_id)
+{
+  global $conn;
+  $empty_input = false;
+
+  $query = "SELECT * FROM usuarios WHERE id='" . $user_id . "'";
+  $checkingUser = $conn->prepare($query);
+  $checkingUser->execute();
+  $userData = $checkingUser->rowCount();
+
+  if ($userData && $userData->rowCount() > 0) {
+    return $userData;
   }
 }
 

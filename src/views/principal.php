@@ -1,5 +1,7 @@
 <?php 
 include('../controllers/Acess/protected.php');
+session_start();
+$_SESSION['token']
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +54,7 @@ include('../controllers/Acess/protected.php');
 
         <div class="options__menu hp">	
 
-            <a href="index.html" class="selected">
+            <a href="index.php" class="selected">
                 <div class="option">
                     <i  class="fas fa-home" title="Inicio"></i>
                     <h4>Inicio</h4>

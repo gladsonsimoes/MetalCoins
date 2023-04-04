@@ -15,14 +15,14 @@ if (!empty($user['loginUser'])) {
   $hash = $data['senha'];
 
   if ($row == 1 && password_verify($senha, $hash)) {
-    $token = uniqid() . '_' . $user['id'] . '_' . $user['id_perfil'];
-    echo($token);
+    $token = uniqid() . '_' . $data['id'] . '_' . $data['id_perfil'];
     $_SESSION["token"] = $token;
+    $_SESSION["id"] = $data['id'];
     setcookie('login', $login);
     echo "<script>
           alert('Logado com Sucesso!');
         </script>";
-    header("Location: ../../views/conta.php");
+    header("Location: ../../views/conta.php?user_id='" . $data['id'] . "'");
   } else {
     echo "<script>
    alert('Login e/ou senha incorretos');
