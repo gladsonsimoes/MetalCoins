@@ -5,7 +5,7 @@ if(!isset($_SESSION)){
 }
 
 
-if (!isset($_SESSION["token"]) || empty($_SESSION["token"])) {
+if (!isset($_SESSION["token"])) {
     header("Location: ../views/notAcess.html");
     exit();
   } 
