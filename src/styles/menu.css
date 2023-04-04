@@ -159,3 +159,6 @@ a.selected{
     font-style: normal;
     font-family: 'Irish Grover', cursive;
 }
+.options__menu #sair{
+    top: 450px;
+}

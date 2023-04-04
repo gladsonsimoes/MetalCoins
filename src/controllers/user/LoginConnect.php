@@ -13,7 +13,8 @@ if (!empty($user['loginUser'])) {
   $row = $result->rowCount();
   $data = $result->fetch();
   $hash = $data['senha'];
-  if ($row == 1 && password_verify($user['password'], $hash)) {
+
+  if ($row == 1 && password_verify($senha, $hash)) {
     $token = uniqid() . '_' . $user['id'] . '_' . $user['id_perfil'];
     echo($token);
     $_SESSION["token"] = $token;
