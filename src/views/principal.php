@@ -25,7 +25,7 @@ $_SESSION['token']
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
 
-    <title>Metalcoins menu</title>
+    <title>Metalcoins</title>
 
 
 
@@ -85,7 +85,7 @@ $_SESSION['token']
             <a href="../controllers/Acess/logout.php">
                 <div id="sair" class="option">
                     <i class="fa fa-sign-out" aria-hidden="true" title="Exit"></i>
-                    <h4>Sair da Conta</h4>
+                    <h4>Sair</h4>
                 </div>
             </a>
 
