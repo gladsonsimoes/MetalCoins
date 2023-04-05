@@ -12,7 +12,7 @@ CREATE TABLE usuarios
  id INT PRIMARY KEY AUTO_INCREMENT,  
  id_perfil INT,  
  nome VARCHAR(45) NOT NULL,  
- email VARCHAR(45) NOT NULL,  
+ email VARCHAR(45) NOT NULL UNIQUE,  
  senha VARCHAR(155) NOT NULL 
 ); 
 
