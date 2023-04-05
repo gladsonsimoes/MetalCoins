@@ -1,7 +1,7 @@
 <?php 
 include('../controllers/Acess/protected.php');
-session_start();
-$_SESSION['token']
+
+
 ?>
 
 <!DOCTYPE html>
