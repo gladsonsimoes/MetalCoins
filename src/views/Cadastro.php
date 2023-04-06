@@ -21,7 +21,7 @@ include_once('../../database/conexao.php');
         <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../styles/cadastro.css">
         <!-- <link type="text/css" rel="stylesheet" href="css/metalcoins.css"> -->
-    <title>Cadastro MetalCoins</title>
+    <title>Cadastro</title>
    
    
 </head>
