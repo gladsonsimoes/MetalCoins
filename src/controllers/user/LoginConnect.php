@@ -18,6 +18,8 @@ if (!empty($user['loginUser'])) {
     $token = uniqid() . '_' . $data['id'] . '_' . $data['id_perfil'];
     $_SESSION["token"] = $token;
     $_SESSION["id"] = $data['id'];
+    $_SESSION["id_perfil"] = $data["id_perfil"];
+
     setcookie('login', $login);
     echo "<script>
           alert('Logado com Sucesso!');
