@@ -43,15 +43,13 @@ include('../controllers/clientUser/conta/conta.php');
         </h1>
     </div>
     <div class="borda2">
+        
         <h1 class="saldoT">Conta</h1>
         <br>
         <br>
-        <h1>
-            <?php echo $data['nome'] ?>
-        </h1>
-        <h1>
-            <?php echo $data['email'] ?>
-        </h1>
+        <h1 class="nomeUsuario">Nome:<h1 class="resultuser"><?php echo $data['nome'] ?></h1></h1> 
+        <h1 class="emailUsuario">Email:<h1 class="resultemail"><?php echo $data['email'] ?></h1></h1>
+        
     </div>
 
     <div class="borda3">
