@@ -161,6 +161,61 @@ text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.25);
 
     
 }
+.nomeUsuario{
+    color: #B1B1B1;
+    position: absolute;
+    width: 164px;
+    height: 26px;
+    left: 80px;
+    top: 95px;
+
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 19px;
+
+}
+.resultuser{
+    color: #7A44EC;
+    position: absolute;
+   
+    left: 160px;
+    top: 95px;
+
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 19px;
+}
+.emailUsuario{
+    color: #B1B1B1;
+    position: absolute;
+    
+    left: 80px;
+    top: 140px;
+
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 19px;
+}
+.resultemail{
+    color: #7A44EC;
+    position: absolute;
+   
+    left: 80px;
+    top: 160px;
+
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 19px;
+}
+
 
 
 
