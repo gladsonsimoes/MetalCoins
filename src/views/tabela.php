@@ -80,15 +80,9 @@ include('../controllers/Acess/protectedAdmin.php');
                             echo "<td> $id_perfil </td>";
                             echo "<td> $nome </td>";
                             echo "<td> $email </td>";
-<<<<<<< HEAD
                             echo "<td>   </td>";
                             echo "<td><button class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</></td>"; 
                             echo "<td><button class='btn btn-danger tu' href='Excluir_User.php?id=$id'>Excluir</button></td>";
-=======
-                            echo "<td>  </td>";
-                            echo "<td><a class='btn btn-primary' href='Edit_User.php?id=$id'>Editar</a></td>";
-                            echo "<td><a class='btn btn-secondary' href='../controllers/Admin/DeleteUser.php?id=$id'>Excluir</a></td>";
->>>>>>> 523981c49ad3c4add114da5d3d8d7237840dc948
                             echo "</tr>";
                         }
                     } else {
