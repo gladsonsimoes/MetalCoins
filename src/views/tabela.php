@@ -11,7 +11,13 @@ include_once('../../database/conexao.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../styles/tabela.css">
     <title>Listar Usuário</title>
+    
 </head>
 
 <body>
@@ -19,8 +25,8 @@ include_once('../../database/conexao.php');
         <!-- NavBar -->
         <header>
             <!-- NavBar -->
-            <nav class="navbar navbar-dark bg-dark">
-                <a class="navbar-brand" href="index.html">MetalCoins</a>
+            <nav  class="navbar navbar tb">
+                <a class="navbar-brand fn" href="principal.php">MetalCoins</a>
             </nav>
         </header>
         <br>
@@ -30,7 +36,7 @@ include_once('../../database/conexao.php');
 
     <div class="container">
         <br>
-        <h1 align="center">Lista de Usuários </h1><br><br>
+        <h1 class="titulof" align="center">Lista de Usuários </h1><br><br>
 
         <?php
         //receber o número da pagina
@@ -47,7 +53,7 @@ include_once('../../database/conexao.php');
         <div>
             <table class="table table-bordered">
                 <thead>
-                    <tr>
+                    <tr class="fonttable">
                         <th scope="col"> Id </th>
                         <th> Id Perfil</th>
                         <th scope="col"> Nome</th>
@@ -73,9 +79,9 @@ include_once('../../database/conexao.php');
                             echo "<td> $id_perfil </td>";
                             echo "<td> $nome </td>";
                             echo "<td> $email </td>";
-                            echo "<td>  </td>";
-                            echo "<td><a class='btn btn-primary' href='Edit_User.php?id=$id'>Editar</a></td>";
-                            echo "<td><a class='btn btn-secondary' href='Excluir_User.php?id=$id'>Excluir</a></td>";
+                            echo "<td>   </td>";
+                            echo "<td><button class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</></td>"; 
+                            echo "<td><button class='btn btn-danger tu' href='Excluir_User.php?id=$id'>Excluir</button></td>";
                             echo "</tr>";
                         }
                     } else {
