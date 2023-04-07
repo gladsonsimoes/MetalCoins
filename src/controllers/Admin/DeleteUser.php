@@ -1,5 +1,5 @@
 <?php
-include_once('../database/conexao.php');
+include('../../../database/conexao.php');
 
 if (!empty($_GET['id'])) {
 
@@ -13,11 +13,14 @@ if (!empty($_GET['id'])) {
     if ($count_rows > 0) {
         $deleteSQL = $conn->prepare("DELETE FROM usuarios WHERE id=$id");
         $deleteSQL->execute();
+        if ($deleteSQL) {
+            echo "<script>
+            alert('Usuário Excluído!');
+            window.location.href='../../views/tabela.php';
+             </script>";
+        }
+    } else {
+        die("Usuario nao existe!");
     } 
-
-    echo "<script>
-    alert('Usuário Excluído!');
-    window.location.href='../../views/tabela.php';
-     </script>";
 }
 ?>

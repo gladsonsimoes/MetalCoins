@@ -13,7 +13,7 @@ CREATE TABLE usuarios
  id_perfil INT,  
  nome VARCHAR(45) NOT NULL,  
  email VARCHAR(45) NOT NULL UNIQUE,  
- senha VARCHAR(155) NOT NULL 
+ senha VARCHAR(155) NOT NULL
 ); 
 
 CREATE TABLE produto 
@@ -47,11 +47,13 @@ CREATE TABLE pedido
 
 ALTER TABLE usuarios ADD FOREIGN KEY(id_perfil) REFERENCES perfil (id);
 
-ALTER TABLE conta_corrente ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);
+ALTER TABLE conta_corrente ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id) ON DELETE CASCADE;
 
 ALTER TABLE pedido ADD FOREIGN KEY(id_produto) REFERENCES produto (id);
 
 ALTER TABLE pedido ADD FOREIGN KEY(id_usuario) REFERENCES usuarios (id);   
+
+-- INSERT INTO usuarios (id_perfil, nome, email, senha) VALUES 1, adm, adm@email.com, 12345678;
 
 INSERT INTO perfil (tipo_de_usuario) VALUES ('admin');
 INSERT INTO perfil (tipo_de_usuario) VALUES ('common');

@@ -1,5 +1,6 @@
 <?php
 include_once('../../database/conexao.php');
+include('../controllers/Acess/protectedAdmin.php');
 ?>
 
 <!DOCTYPE html>
@@ -79,13 +80,19 @@ include_once('../../database/conexao.php');
                             echo "<td> $id_perfil </td>";
                             echo "<td> $nome </td>";
                             echo "<td> $email </td>";
+<<<<<<< HEAD
                             echo "<td>   </td>";
                             echo "<td><button class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</></td>"; 
                             echo "<td><button class='btn btn-danger tu' href='Excluir_User.php?id=$id'>Excluir</button></td>";
+=======
+                            echo "<td>  </td>";
+                            echo "<td><a class='btn btn-primary' href='Edit_User.php?id=$id'>Editar</a></td>";
+                            echo "<td><a class='btn btn-secondary' href='../controllers/Admin/DeleteUser.php?id=$id'>Excluir</a></td>";
+>>>>>>> 523981c49ad3c4add114da5d3d8d7237840dc948
                             echo "</tr>";
                         }
                     } else {
-                        echo "Erro com Banco de Dados";
+                        die(" > Erro com Banco de Dados <");
                     }
                     ?>
                 </tbody>
@@ -124,7 +131,7 @@ include_once('../../database/conexao.php');
 
         for ($pagina_anterior = $pagina - $maximo_link; $pagina_anterior <= $pagina - 1; $pagina_anterior++) {
             if ($pagina_anterior >= 1) {
-                echo "<a href='Listar.php?page=$pagina_anterior'>[ $pagina_anterior ]</a>";
+                echo "<a href='tabela.php?page=$pagina_anterior'>[ $pagina_anterior ]</a>";
             }
         }
 
@@ -133,10 +140,10 @@ include_once('../../database/conexao.php');
 
         for ($proxima_pagina = $pagina + 1; $proxima_pagina <= $pagina + $maximo_link; $proxima_pagina++) {
             if ($proxima_pagina <= $qtn_pagina) {
-                echo "<a href='Listar.php?page=$proxima_pagina'>[ $proxima_pagina ]</a>";
+                echo "<a href='tabela.php?page=$proxima_pagina'>[ $proxima_pagina ]</a>";
             }
         }
-        echo "<a href='Listar.php?page=$qtn_pagina'>[ Ultima Página ] </a>";
+        echo "<a href='tabela.php?page=$qtn_pagina'>[ Ultima Página ] </a>";
 
         ?>
     </div>
