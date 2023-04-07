@@ -1,0 +1,41 @@
+.tb{
+    background-color: #6E3AC2;
+}
+.titulof{
+    font-family: 'Irish Grover';
+    left: 335px;
+    top: 68px;
+    font-family: 'Irish Grover';
+    font-style: normal;
+    font-size: 65px;
+    font-family: 'Irish Grover', cursive;
+    color: #260e4e;
+    border-style: hidden;
+    outline: none;
+   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    background: url(dollar.png);
+
+}
+.fn{
+    font-family: 'Irish Grover';
+    color: aliceblue;
+}
+.container{
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.fonttable{
+    font-family: 'Alata';
+}
+
+.fonttable{
+    background: #6E3AC2;
+    border-color: #6E3AC2;
+}
+th{
+    color: rgb(233, 233, 233);
+    
+}
+.ty{
+    background-color: #260e4e;
+}
