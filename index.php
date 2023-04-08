@@ -12,11 +12,8 @@ include_once('database/conexao.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/login.css">
@@ -27,6 +24,7 @@ include_once('database/conexao.php');
 </head>
 
 <body style="background: linear-gradient(123.7deg, #7236AD -33.13%, #313C59 111.98%); height: 20px;">
+
     <div class="container" align="center">
         <div id="tituloMetalCoins">
             <h1 id="titulo">Metal Coins</h1>
@@ -43,7 +41,7 @@ include_once('database/conexao.php');
                         <input type="email" name="email" class="form-control rounded-pill ex3" placeholder="E-mail:"
                             required autocomplete="off" />
                     </div>
-                    <br>
+               
                     <div class="col-9">
                         <input type="password" name="password" class="form-control rounded-pill ex1"
                             placeholder="Senha:" minlength="8" required />
@@ -55,7 +53,6 @@ include_once('database/conexao.php');
             </div>
             <br>
         </div>
-        
         <br>
         <div>
             <h4 class="form-check-label fn">Ainda não é cadastrado? <a href="src/views/cadastro.php">Registrar</a></h4>
