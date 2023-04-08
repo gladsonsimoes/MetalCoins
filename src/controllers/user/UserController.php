@@ -1,6 +1,6 @@
 <?php
 include_once('../../../database/conexao.php');
-$user_id = $_GET['id'];
+
 function registerUser($user)
 {
   global $conn;
