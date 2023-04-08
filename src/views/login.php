@@ -1,6 +1,5 @@
 <?php
 include_once('../../database/conexao.php');
-include('../controllers/Acess/redirectLogin.php');
 ?>
 
 <!DOCTYPE html>
