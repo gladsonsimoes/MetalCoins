@@ -12,28 +12,20 @@ include('../controllers/Acess/protectedAdmin.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/tabela.css">
 
-        <link rel="stylesheet" href="../styles/tabela.css">
     <title>Listar Usuário</title>
-    
 </head>
 
 <body>
     <header>
-        <!-- NavBar -->
-        <header>
-            <!-- NavBar -->
-            <nav  class="navbar navbar tb">
-                <a class="navbar-brand fn" href="principal.php">MetalCoins</a>
-            </nav>
-        </header>
-        <br>
-
+        <nav class="navbar navbar tb">
+            <a class="navbar-brand fn" href="admin.php"> MetalCoins</a>
+        </nav>
     </header>
-
+    <br>
 
     <div class="container">
         <br>
@@ -55,9 +47,9 @@ include('../controllers/Acess/protectedAdmin.php');
             <table class="table table-bordered">
                 <thead>
                     <tr class="fonttable">
-                        <th scope="col"> Id </th>
+                        <th> Id </th>
                         <th> Id Perfil</th>
-                        <th scope="col"> Nome</th>
+                        <th> Nome</th>
                         <th> E-mail </th>
                         <th> MetalCoins </th>
                         <th> Editar</th>
@@ -81,8 +73,8 @@ include('../controllers/Acess/protectedAdmin.php');
                             echo "<td> $nome </td>";
                             echo "<td> $email </td>";
                             echo "<td>   </td>";
-                            echo "<td><button class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</></td>"; 
-                            echo "<td><button class='btn btn-danger tu' href='Excluir_User.php?id=$id'>Excluir</button></td>";
+                            echo "<td><a class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</a></td>";
+                            echo "<td><a class='btn btn-danger tu' href='../controllers/Admin/DeleteUser.php?id=$id'>Excluir</a></td>";
                             echo "</tr>";
                         }
                     } else {
