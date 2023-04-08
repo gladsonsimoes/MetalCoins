@@ -1,6 +1,6 @@
 <?php
-include_once('../../../../database/conexao.php');
-session_start();
+include('../../database/conexao.php');
+
 $_SESSION["token"];
 $id = $_SESSION["id"];
 
