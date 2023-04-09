@@ -1,6 +1,6 @@
 <?php
 include_once('../../database/conexao.php');
-include('../controllers/Acess/protectedAdmin.php');
+ include('../controllers/Acess/protectedAdmin.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +14,7 @@ include('../controllers/Acess/protectedAdmin.php');
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../styles/dialog.css">
     <link rel="stylesheet" href="../styles/tabela.css">
 
     <title>Listar Usuário</title>
@@ -73,7 +74,45 @@ include('../controllers/Acess/protectedAdmin.php');
                             echo "<td> $nome </td>";
                             echo "<td> $email </td>";
                             echo "<td>   </td>";
-                            echo "<td><a class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</a></td>";
+                            //  echo "<td><a class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</a></td>";
+                            echo "<td>
+                                     <button class='btn btn-dark ty'>Editar</button>
+                                         <dialog>
+                                                <form class='form'>
+                                                        <p class='title'>Editando Usuário </p>
+                                                        <p class='message'>Logo abaixo esta as informações do $nome</p>
+                                                            <div class='flex'>
+                                                            <label>
+                                                                <input value=$nome required='' type='text' class='input'>
+                                                                <span>Nome</span>
+                                                                
+                                                            </label>
+
+                                                             <label>
+                                                                 <input value=$nome required='' placeholder='' type='text' class='input'>
+                                                                 <span>Sobrenome</span>
+                                                             </label>
+                                                        </div>  
+                                                                
+                                                        <label>
+                                                            <input value=$email required='' placeholder='' type='email' class='input'>
+                                                            <span>E-mail</span>
+                                                        </label> 
+                                                            
+                                                        <label>
+                                                            <input required='' placeholder='' type='password' class='input'>
+                                                            <span>Senha</span>
+                                                        </label>
+                                                        <label>
+                                                            <input required='' placeholder='' type='password' class='input'>
+                                                            <span>Confirmar Senha</span>
+                                                        </label>
+                                                        <button class='submit'>Salvar</button>
+                                                        
+                                                    </form>
+                                         </dialog>;
+                                         </td>";
+
                             echo "<td><a class='btn btn-danger tu' href='../controllers/Admin/DeleteUser.php?id=$id'>Excluir</a></td>";
                             echo "</tr>";
                         }
@@ -133,6 +172,7 @@ include('../controllers/Acess/protectedAdmin.php');
 
         ?>
     </div>
+            <script type="text/javascript" src="../js/dialog.js"></script> 
 
 </body>
 
