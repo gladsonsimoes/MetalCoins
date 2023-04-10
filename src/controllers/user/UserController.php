@@ -53,10 +53,11 @@ function getUserById($user_id)
   $checkingUser->execute();
   $userData = $checkingUser->rowCount();
 
-  if ($userData && $userData->rowCount() > 0) {
+  if ($userData  > 0) {
     return $userData;
   }
 }
+
 
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
