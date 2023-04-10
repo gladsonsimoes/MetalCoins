@@ -20,8 +20,10 @@ CREATE TABLE produto
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
  nome VARCHAR(45) NOT NULL,  
+ descricao VARCHAR(155) NOT NULL,
  preco FLOAT NOT NULL,  
- estoque INT NOT NULL
+ estoque INT NOT NULL,
+ imagem VARCHAR(255) NOT NULL
 ); 
 
 
