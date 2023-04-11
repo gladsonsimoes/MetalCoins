@@ -1,5 +1,5 @@
 <?php 
-include('../controllers/Acess/protectedAdmin.php');
+ include('../controllers/Acess/protectedAdmin.php');
 
 ?>
 
@@ -78,6 +78,12 @@ include('../controllers/Acess/protectedAdmin.php');
                 <div class="option">
                     <i class="fa fa-shopping-cart" aria-hidden="true" title="produtos"></i>
                     <h4>Produtos</h4>
+                </div>
+            </a>
+            <a href="tabela.php">
+                <div class="option">
+                    <i class="fas fa-edit" aria-hidden="true" title="Editar"></i>
+                    <h4>Editar usuario</h4>
                 </div>
             </a>
 
