@@ -49,9 +49,9 @@ include('../controllers/Acess/protectedAdmin.php');
                 <thead>
                     <tr class="fonttable">
                         <th> Id </th>
-                        <th> Id Perfil</th>
                         <th> Nome</th>
                         <th> E-mail </th>
+                        <th> Id Perfil</th>
                         <th> MetalCoins </th>
                         <th> Editar</th>
                         <th> Excluir</th>
@@ -70,12 +70,12 @@ include('../controllers/Acess/protectedAdmin.php');
                             extract($row_usuario);
                             echo "<tr>";
                             echo "<td> $row_usuario[id]</td>";
-                            echo "<td> $row_usuario[id_perfil] </td>";
                             echo "<td> $row_usuario[nome] </td>";
                             echo "<td> $row_usuario[email] </td>";
+                            echo "<td> $row_usuario[id_perfil] </td>";
                             echo "<td>   </td>";
                             echo "<td>
-                             <button class='btn btn-dark ty'>Editar</button>
+                             <button class='btn btn-dark id='edit-$id' ty'>Editar</button>
                                 <dialog>
                                     <form class='form' method='POST' action='../controllers/Admin/UpdateUser.php'>
                                       <p class='title'>Editando Usuário </p>
@@ -94,7 +94,7 @@ include('../controllers/Acess/protectedAdmin.php');
                                 </dialog>
                             </td>";
 
-                            echo "<td><a class='btn btn-danger tu' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
+                            echo "<td><a class='btn btn-danger tu' id='delete-$id' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
                             echo "</tr>";
                         }
                     } else {
@@ -157,14 +157,15 @@ include('../controllers/Acess/protectedAdmin.php');
     <!-- <script type="text/javascript" src="../js/dialog.js"></script> -->
 
     <script type="text/javascript">
-        const button = document.querySelector("button");
-        const modal = document.querySelector("dialog");
+    const buttons = document.querySelectorAll("table button");
+    const modal = document.querySelector("dialog");
 
-        button.onclick = function (selectIdButton) {
-            modal.showModal(selectIdButton);
-        }
-
-    </script>
+    buttons.forEach(button => {
+        button.onclick = function () {
+            modal.showModal();
+        };
+    });
+</script>
 </body>
 
 </html>
