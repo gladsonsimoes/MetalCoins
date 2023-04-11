@@ -1,5 +1,6 @@
 <?php
 include_once('../../../database/conexao.php');
+session_start();
 
 function registerUser($user)
 {
@@ -37,7 +38,7 @@ function registerUser($user)
       $inserted = $inserting->execute();
       echo "<script type='text/javascript'>
       alert('Cadastro Realizado com Sucesso! ');
-      window.location.href='../../views/login.php';
+      window.location.href='../../views/principal.php';
       </script>";
     }
   }
@@ -53,14 +54,39 @@ function getUserById($user_id)
   $checkingUser->execute();
   $userData = $checkingUser->rowCount();
 
-  if ($userData  > 0) {
+  if ($userData > 0) {
     return $userData;
   }
 }
 
+function updateUser($user)
+{
+  global $conn;
+  $empty_input = false;
+  var_dump($user);
+  $queryUser = "UPDATE usuarios 
+  SET nome = '" . $user['name'] . "', 
+  email = '" . $user['email'] . "' 
+  WHERE id ='" . $user['id'] . "' ";
+  $updatedUser = $conn->prepare($queryUser);
+
+  $updatedUser->execute() or die();
+
+  if ($updatedUser) {
+    echo "<script type='text/javascript'>
+        alert('Usuário alterado com sucesso! ');
+        window.location.href='../../views/tabela.php';
+      </script>";
+  }
+}
+
+
 
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
+if (!empty($user['EditUser'])) {
+  updateUser($user);
+}
 if (!empty($user['createdUser'])) {
   registerUser($user);
 }
