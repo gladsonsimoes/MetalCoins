@@ -1,6 +1,6 @@
 <?php
 include_once('../../database/conexao.php');
-// include('../controllers/Acess/protectedAdmin.php');
+include('../controllers/Acess/protectedAdmin.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ include_once('../../database/conexao.php');
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../styles/dialog.css">
+    <link rel="stylesheet" href="../styles/dialog.css">
     <link rel="stylesheet" href="../styles/tabela.css">
 
     <title>Listar Usuário</title>
@@ -69,51 +69,32 @@ include_once('../../database/conexao.php');
                         while ($row_usuario = $result->fetch(PDO::FETCH_ASSOC)) {
                             extract($row_usuario);
                             echo "<tr>";
-                            echo "<td> $id</td>";
-                            echo "<td> $id_perfil </td>";
-                            echo "<td> $nome </td>";
-                            echo "<td> $email </td>";
+                            echo "<td> $row_usuario[id]</td>";
+                            echo "<td> $row_usuario[id_perfil] </td>";
+                            echo "<td> $row_usuario[nome] </td>";
+                            echo "<td> $row_usuario[email] </td>";
                             echo "<td>   </td>";
-                            //  echo "<td><a class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</a></td>";
                             echo "<td>
-                                     <button class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</button>
-                                         <dialog>
-                                                <form class='form'>
-                                                        <p class='title'>Editando Usuário </p>
-                                                        <p class='message'>Logo abaixo esta as informações do $nome</p>
-                                                            <div class='flex'>
-                                                            <label>
-                                                                <input value=$nome required='' type='text' class='input'>
-                                                                <span>Nome</span>
-                                                                
-                                                            </label>
+                             <button class='btn btn-dark ty'>Editar</button>
+                                <dialog>
+                                    <form class='form' method='POST' action='../controllers/Admin/UpdateUser.php'>
+                                      <p class='title'>Editando Usuário </p>
+                                      <p class='message'>Logo abaixo esta as informações do $row_usuario[nome] </p>
+                                       <label>
+                                         <input value=$row_usuario[nome] placeholder='Editar Nome' type='text' class='input'>
+                                         <span> Nome </span>
+                                       </label>                        
+                                       <label> 
+                                         <input value=$row_usuario[email]  placeholder='Editar Email' type='email' class='input'> 
+                                         <span>E-mail</span>
+                                       </label>
+                                          <input value='Alterar' class='submit' type='submit'> 
+                                          <a class='btn btn-dark ty submit' href=''> Cancelar </a>    
+                                    </form>
+                                </dialog>
+                            </td>";
 
-                                                             <label>
-                                                                 <input value=$nome required='' placeholder='' type='text' class='input'>
-                                                                 <span>Sobrenome</span>
-                                                             </label>
-                                                        </div>  
-                                                                
-                                                        <label>
-                                                            <input value=$email required='' placeholder='' type='email' class='input'>
-                                                            <span>E-mail</span>
-                                                        </label> 
-                                                            
-                                                        <label>
-                                                            <input required='' placeholder='' type='password' class='input'>
-                                                            <span>Senha</span>
-                                                        </label>
-                                                        <label>
-                                                            <input required='' placeholder='' type='password' class='input'>
-                                                            <span>Confirmar Senha</span>
-                                                        </label>
-                                                        <button class='submit'>Salvar</button>
-                                                        
-                                                    </form>
-                                         </dialog>
-                                         </td>";
-
-                            echo "<td><a class='btn btn-danger tu' href='../controllers/Admin/DeleteUser.php?id=$id'>Excluir</a></td>";
+                            echo "<td><a class='btn btn-danger tu' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
                             echo "</tr>";
                         }
                     } else {
@@ -122,13 +103,13 @@ include_once('../../database/conexao.php');
                     ?>
                 </tbody>
             </table>
+            <br>
         </div>
     </div>
 
     <!-- Página da Tabela -->
     <div align="center" id="Listagem-Page">
         <?php
-        echo "<br>";
 
         //receber o número da pagina
         $pagina_atual = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
@@ -172,8 +153,18 @@ include_once('../../database/conexao.php');
 
         ?>
     </div>
-            <script type="text/javascript" src="../js/dialog.js"></script> 
 
+    <!-- <script type="text/javascript" src="../js/dialog.js"></script> -->
+
+    <script type="text/javascript">
+        const button = document.querySelector("button");
+        const modal = document.querySelector("dialog");
+
+        button.onclick = function (selectIdButton) {
+            modal.showModal(selectIdButton);
+        }
+
+    </script>
 </body>
 
 </html>
