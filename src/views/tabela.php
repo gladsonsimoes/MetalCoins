@@ -75,26 +75,26 @@ include('../controllers/Acess/protectedAdmin.php');
                             echo "<td> $row_usuario[id_perfil] </td>";
                             echo "<td>   </td>";
                             echo "<td>
-                             <button class='btn btn-dark id='edit-$id' ty'>Editar</button>
-                                <dialog>
-                                    <form class='form' method='POST' action='../controllers/Admin/UpdateUser.php'>
-                                      <p class='title'>Editando Usuário </p>
-                                      <p class='message'>Logo abaixo esta as informações do $row_usuario[nome] </p>
-                                       <label>
-                                         <input value=$row_usuario[nome] placeholder='Editar Nome' type='text' class='input'>
-                                         <span> Nome </span>
-                                       </label>                        
-                                       <label> 
-                                         <input value=$row_usuario[email]  placeholder='Editar Email' type='email' class='input'> 
-                                         <span>E-mail</span>
-                                       </label>
-                                          <input value='Alterar' class='submit' type='submit'> 
-                                          <a class='btn btn-dark ty submit' href=''> Cancelar </a>    
-                                    </form>
-                                </dialog>
-                            </td>";
+                 <button class='btn btn-dark' id='edit-$row_usuario[id]'>Editar</button>
+                    <dialog>
+                        <form class='form' method='POST' action='../controllers/Admin/UpdateUser.php'>
+                          <p class='title'>Editando Usuário </p>
+                          <p class='message'>Logo abaixo esta as informações do $row_usuario[nome] </p>
+                           <label>
+                             <input value=$row_usuario[nome] placeholder='Editar Nome' type='text' class='input'>
+                             <span> Nome </span>
+                           </label>                        
+                           <label> 
+                             <input value=$row_usuario[email]  placeholder='Editar Email' type='email' class='input'> 
+                             <span>E-mail</span>
+                           </label>
+                              <input value='Alterar' name='EditUser' class='submit' type='submit'> 
+                              <a class='btn btn-dark' id='cancel-$row_usuario[id]' href=''> Cancelar </a>    
+                        </form>
+                    </dialog>
+                </td>";
 
-                            echo "<td><a class='btn btn-danger tu' id='delete-$id' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
+                            echo "<td><a class='btn btn-danger' id='delete-$row_usuario[id]' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
                             echo "</tr>";
                         }
                     } else {
@@ -153,19 +153,7 @@ include('../controllers/Acess/protectedAdmin.php');
 
         ?>
     </div>
-
-    <!-- <script type="text/javascript" src="../js/dialog.js"></script> -->
-
-    <script type="text/javascript">
-    const buttons = document.querySelectorAll("table button");
-    const modal = document.querySelector("dialog");
-
-    buttons.forEach(button => {
-        button.onclick = function () {
-            modal.showModal();
-        };
-    });
-</script>
+    <script src="../js/dialog.js" type="text/javascript"> </script>
 </body>
 
 </html>
