@@ -1,6 +1,6 @@
 <?php 
 include('../controllers/Acess/protected.php');
-
+include('../controllers/products/productsController.php');
 
 ?>
 

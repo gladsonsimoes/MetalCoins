@@ -75,25 +75,25 @@ include('../controllers/Acess/protectedAdmin.php');
                             echo "<td> $row_usuario[id_perfil] </td>";
                             echo "<td>   </td>";
                             echo "<td>
-                 <button class='btn btn-dark' id='edit-$row_usuario[id]'>Editar</button>
-                    <dialog>
-                        <form class='form' method='POST' action='../controllers/Admin/UpdateUser.php'>
+                 <button class='btn btn-dark' id='edit-$row_usuario[id]' '>Editar</button>
+                    <dialog data-id='$row_usuario[id]'>
+                        <form class='form' method='POST' action='../controllers/user/UserController.php'>
                           <p class='title'>Editando Usuário </p>
-                          <p class='message'>Logo abaixo esta as informações do $row_usuario[nome] </p>
-                           <label>
-                             <input value=$row_usuario[nome] placeholder='Editar Nome' type='text' class='input'>
+                          <p class='message'>Logo abaixo esta as informações do $row_usuario[nome] </p> 
+                          <label>
+                             <input value=$row_usuario[nome] name='name' placeholder='Editar Nome' type='text' class='input'>
                              <span> Nome </span>
                            </label>                        
                            <label> 
-                             <input value=$row_usuario[email]  placeholder='Editar Email' type='email' class='input'> 
+                             <input value=$row_usuario[email] name='email' placeholder='Editar Email' type='email' class='input'> 
                              <span>E-mail</span>
+                             <input type='hidden' name='id' value='$row_usuario[id]'>
                            </label>
                               <input value='Alterar' name='EditUser' class='submit' type='submit'> 
                               <a class='btn btn-dark' id='cancel-$row_usuario[id]' href=''> Cancelar </a>    
-                        </form>
+                        </form> 
                     </dialog>
                 </td>";
-
                             echo "<td><a class='btn btn-danger' id='delete-$row_usuario[id]' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
                             echo "</tr>";
                         }
