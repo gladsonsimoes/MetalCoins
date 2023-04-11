@@ -1,6 +1,6 @@
 <?php
 include_once('../../database/conexao.php');
- include('../controllers/Acess/protectedAdmin.php');
+// include('../controllers/Acess/protectedAdmin.php');
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +76,7 @@ include_once('../../database/conexao.php');
                             echo "<td>   </td>";
                             //  echo "<td><a class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</a></td>";
                             echo "<td>
-                                     <button class='btn btn-dark ty'>Editar</button>
+                                     <button class='btn btn-dark ty' href='Edit_User.php?id=$id'>Editar</button>
                                          <dialog>
                                                 <form class='form'>
                                                         <p class='title'>Editando Usuário </p>
@@ -110,7 +110,7 @@ include_once('../../database/conexao.php');
                                                         <button class='submit'>Salvar</button>
                                                         
                                                     </form>
-                                         </dialog>;
+                                         </dialog>
                                          </td>";
 
                             echo "<td><a class='btn btn-danger tu' href='../controllers/Admin/DeleteUser.php?id=$id'>Excluir</a></td>";
