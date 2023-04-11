@@ -9,6 +9,8 @@ function indexProducts()
     $query = "SELECT * FROM produto";
     $products = $conn->prepare($query);
     $products->execute();
+    $row = $products->rowCount();
+    $data = $products->fetch();
 
     return $products;
 }
@@ -63,6 +65,7 @@ function store($product)
         }
     }
 }
+/*
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -110,4 +113,4 @@ function store($product)
     </div>
 </body>
 
-</html>
+</html>*/
