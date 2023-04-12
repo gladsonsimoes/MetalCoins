@@ -61,9 +61,11 @@ include('../controllers/Acess/protectedAdmin.php');
                 <!-- Listar Conteudo da Tabela -->
                 <tbody>
                     <?php
-                    $queryUser = "SELECT * FROM usuarios LIMIT $inicio, $limite_result";
+                    $queryUser = "SELECT usuarios.*, conta_corrente.* 
+                    FROM usuarios INNER JOIN conta_corrente 
+                    LIMIT $inicio, $limite_result";
                     $result = $conn->prepare($queryUser);
-                    $result->execute();
+                    $result->execute(); 
 
                     if (($result) and ($result->rowCount() > 0)) {
                         while ($row_usuario = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -73,7 +75,7 @@ include('../controllers/Acess/protectedAdmin.php');
                             echo "<td> $row_usuario[nome] </td>";
                             echo "<td> $row_usuario[email] </td>";
                             echo "<td> $row_usuario[id_perfil] </td>";
-                            echo "<td>   </td>";
+                            echo "<td> $row_usuario[saldo]  </td>";
                             echo "<td>
                  <button class='btn btn-dark' id='edit-$row_usuario[id]' '>Editar</button>
                     <dialog data-id='$row_usuario[id]'>
