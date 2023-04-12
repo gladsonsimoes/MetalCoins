@@ -1,3 +1,6 @@
+<?php
+include_once('../../database/conexao.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,18 +26,21 @@
             class="container">
             <br>
             <br>
-            <form id="signIn" method="POST" action="../controllers/user/LoginConnect.php">
+            <form id="signIn" method="POST" action="../controllers/user/ForgotPassword.php">
                 <div class="form-group form-row">
                     <div class="col-9">
-                        <input type="email" name="email" class="form-control rounded-pill ex3" placeholder="E-mail"
-                            required />
+                        <input type="email" name="email" class="form-control rounded-pill ex3"
+                            placeholder="E-mail cadastrado" required />
                     </div>
                     <div class="col-9">
-                        <input type="password" name="password" class="form-control rounded-pill ex1" placeholder="Senha"
-                            minlength="8" required />
+                        <input type="password" name="password" class="form-control rounded-pill ex1"
+                            placeholder="Nova senha" minlength="8" required />
                     </div>
-                    
-                    <input style="background-color: #332E51;" type="submit" value="Login" name="loginUser"
+                    <div class="col-9">
+                        <input type="password" name="passwordConfirm" class="form-control rounded-pill ex1"
+                            placeholder="Confirmar senha" minlength="8" required />
+                    </div>
+                    <input style="background-color: #332E51;" type="submit" value="Alterar" name="forgotPass"
                         class="btn btn-dark btn-lg rounded-pill ex" />
                 </div>
             </form>

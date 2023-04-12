@@ -47,6 +47,7 @@ include_once('../../database/conexao.php');
         <br>
         <div>
             <h4 class="form-check-label fn">Ainda não é cadastrado? <a href="cadastro.php">Registrar</a></h4>
+            <h4 class="form-check-label fn"><a href="forgotPassword.php">Esqueceu sua senha?</a></h4>
         </div>
     </div>
 </body>
