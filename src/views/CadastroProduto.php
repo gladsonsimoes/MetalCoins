@@ -22,7 +22,7 @@ include('../controllers/Acess/protectedAdmin.php');
 <body>
 
     <div class="container" align="center">
-            <form class="form" name="cadProduto" action="../controllers/products/productsController.php">
+            <form class="form" name="cadProduto" method="POST" action="../controllers/products/productsController.php">
                 <span class="title">Cadastro de Produtos</span>
                             <div class="container2"> 
                                 <div class="header"> 
@@ -36,11 +36,11 @@ include('../controllers/Acess/protectedAdmin.php');
                                                     </label> 
                                                     <input id="file" type="file"> 
                                                     </div>
-                                <input type="text" class="input" placeholder="Nome">
-                                <input type="text" class="input" placeholder="Descrição"> 
-                                <input type="text" class="input" placeholder="Preço">
-                                <input type="text" class="input" placeholder="Estoque"> 
-                                <button class="botao" type="submit" value="Cadastrar" name="Product">Cadastrar</button>
+                                <input type="text" name="nome" class="input" placeholder="Nome">
+                                <input type="text" name="descricao" class="input" placeholder="Descrição"> 
+                                <input type="text" name="preco" class="input" placeholder="Preço">
+                                <input type="text" name="estoque" class="input" placeholder="Estoque"> 
+                                <button class="botao" type="submit" value="Cadastrar" name="storeProduct">Cadastrar</button>
             </form>
     </div>
 </body>

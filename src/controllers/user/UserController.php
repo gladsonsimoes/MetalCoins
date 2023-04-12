@@ -63,7 +63,6 @@ function updateUser($user)
 {
   global $conn;
   $empty_input = false;
-  var_dump($user);
   $queryUser = "UPDATE usuarios 
   SET nome = '" . $user['name'] . "', 
   email = '" . $user['email'] . "' 
