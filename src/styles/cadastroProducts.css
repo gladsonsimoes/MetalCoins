@@ -1,10 +1,14 @@
+body{
+  background-color:rgb(45, 8, 90);
+}
+
 .form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 1000px;
     background-color: rgba(86.06253191828728, 17.212498784065247, 172.12500303983688, 1);
-    border-radius: 20px;
+    border-radius: 60px;
     padding: 30px 20px;
     margin-top: 150px;
     box-shadow: 100px 100px 80px rgba(0, 0, 0, 0.03)
@@ -18,6 +22,7 @@
     margin-bottom: 4px;
     font-size: 45px;
     margin-top: -20px;
+    font-family: 'Quicksand', sans-serif;
   }
   
   .sub {
@@ -37,16 +42,7 @@
     color: rgb(23, 111, 211);
   }
   
-  .avatar {
-    height: 100px;
-    width: 100px;
-    background-color: rgb(23, 111, 211);
-    border-radius: 50%;
-    align-self: center;
-    padding: 6px;
-    cursor: pointer;
-    box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
-  }
+  
   
   .form button {
     align-self: flex-end;
@@ -66,7 +62,7 @@
   
   .botao {
     margin-top: 12px;
-    background-color: rgb(23, 111, 211);
+    background-color:rgb(42, 3, 90);;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
@@ -75,7 +71,8 @@
     border: none;
     outline: none;
     border-radius: 30px;
-    left: 150px;
+    position: relative;
+    left: -650px;
 
   }
   
@@ -89,3 +86,74 @@
   body{
     background: linear-gradient(0 0 0 /.5);
   }
+
+
+    .container2 {
+      height: 300px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      gap: 5px;
+      background-color: rgba(0, 110, 255, 0.041);
+     position: absolute;
+     left: 1040px;
+     margin-top: 95px;
+    }
+  
+    .header {
+      flex: 1;
+      width: 100%;
+      border: 2px dashed royalblue;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .header svg {
+      height: 100px;
+    }
+  
+    .header p {
+      text-align: center;
+      color: black;
+    }
+  
+    .footer {
+      background-color: rgba(0, 110, 255, 0.075);
+      width: 100%;
+      height: 40px;
+      padding: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: black;
+      border: none;
+    }
+  
+    .footer svg {
+      height: 130%;
+      fill: royalblue;
+      background-color: rgba(70, 66, 66, 0.103);
+      border-radius: 50%;
+      padding: 2px;
+      cursor: pointer;
+      box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
+    }
+  
+    .footer p {
+      flex: 1;
+      text-align: center;
+    }
+  
+    #file {
+      display: none;
+    }
