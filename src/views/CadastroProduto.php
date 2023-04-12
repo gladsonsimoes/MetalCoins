@@ -1,5 +1,5 @@
 <?php
-include("../controllers/products/productsController.php"); 
+include_once('../../database/conexao.php');
 include('../controllers/Acess/protectedAdmin.php');   
 ?>
 
