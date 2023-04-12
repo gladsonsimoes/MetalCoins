@@ -1,5 +1,6 @@
 <?php
-include("../controllers/products/productsController.php");    
+include("../controllers/products/productsController.php"); 
+include('../controllers/Acess/protectedAdmin.php');   
 ?>
 
 <!DOCTYPE html>
