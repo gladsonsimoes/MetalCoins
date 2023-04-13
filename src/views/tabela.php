@@ -48,10 +48,10 @@ include('../controllers/Acess/protectedAdmin.php');
             <table class="table table-bordered">
                 <thead>
                     <tr class="fonttable">
-                        <th> Id </th>
+                        <th> ID </th>
                         <th> Nome</th>
                         <th> E-mail </th>
-                        <th> Id Perfil</th>
+                        <th> ID Perfil</th>
                         <th> MetalCoins </th>
                         <th> Editar</th>
                         <th> Excluir</th>
@@ -61,7 +61,7 @@ include('../controllers/Acess/protectedAdmin.php');
                 <!-- Listar Conteudo da Tabela -->
                 <tbody>
                     <?php
-                    $queryUser = "SELECT usuarios.*, conta_corrente.* 
+                    $queryUser = "SELECT usuarios.*, conta_corrente.saldo
                     FROM usuarios INNER JOIN conta_corrente 
                     LIMIT $inicio, $limite_result";
                     $result = $conn->prepare($queryUser);
