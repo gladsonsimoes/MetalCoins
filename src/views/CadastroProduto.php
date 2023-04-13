@@ -1,6 +1,6 @@
 <?php
 include_once('../../database/conexao.php');
-include('../controllers/Acess/protectedAdmin.php');   
+// include('../controllers/Acess/protectedAdmin.php');   
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +15,10 @@ include('../controllers/Acess/protectedAdmin.php');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/cadastroProducts.css">
     <title>Cadastro de Produtos</title>
 </head>
