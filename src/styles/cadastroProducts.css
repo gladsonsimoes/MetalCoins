@@ -7,22 +7,26 @@ body{
     flex-direction: column;
     gap: 10px;
     width: 1000px;
-    background-color: rgba(86.06253191828728, 17.212498784065247, 172.12500303983688, 1);
-    border-radius: 60px;
     padding: 30px 20px;
     margin-top: 150px;
-    box-shadow: 100px 100px 80px rgba(0, 0, 0, 0.03)
+
+      box-shadow: 5px 14px 12px 2px rgba(0, 0, 0, 0.25);
+      background: linear-gradient(180deg, #6534b4 0%, rgba(220, 220, 220, 0) 107.71%);
+      border-radius: 60px;
   }
   
   .title {
-    color:aliceblue ;
+    color:#fefeff;
     font-weight: bold;
     text-align: center;
     font-size: 20px;
     margin-bottom: 4px;
     font-size: 45px;
-    margin-top: -20px;
-    font-family: 'Quicksand', sans-serif;
+    margin-top: -25px;
+       font-family: 'Alegreya Sans';    border-style: hidden;
+      outline: none;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: inherit;
   }
   
   .sub {
@@ -39,7 +43,7 @@ body{
   }
   
   .sub a {
-    color: rgb(23, 111, 211);
+    color:#d3c2f0 ;
   }
   
   
@@ -54,10 +58,12 @@ body{
     outline: none;
     width: 500px;
     padding: 16px 10px;
-    background-color: rgb(247, 243, 243);
+    background-color: #d3c2f0;
     border-radius: 10px;
     box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
     margin-top: 10px;
+    font-size: 20px;
+    font-style:initial;
   }
   
   .botao {
@@ -91,7 +97,7 @@ body{
     .container2 {
       height: 300px;
       width: 300px;
-      border-radius: 10px;
+      border-radius: 25px;
       box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
       display: flex;
       flex-direction: column;
@@ -99,21 +105,22 @@ body{
       justify-content: space-between;
       padding: 10px;
       gap: 5px;
-      background-color: rgba(0, 110, 255, 0.041);
-     position: absolute;
+      background: aliceblue; 
+      position: absolute;
      left: 1040px;
-     margin-top: 95px;
+     margin-top: 60px;
     }
   
     .header {
       flex: 1;
       width: 100%;
-      border: 2px dashed royalblue;
+      border: 2px dashed #6534b4;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      background-color: rgb(210, 210, 211);
     }
   
     .header svg {
@@ -122,11 +129,11 @@ body{
   
     .header p {
       text-align: center;
-      color: black;
+      color: rgb(0, 0, 0);
     }
   
     .footer {
-      background-color: rgba(0, 110, 255, 0.075);
+      background-color:hsl(265, 100%, 93%) ;
       width: 100%;
       height: 40px;
       padding: 8px;
@@ -141,12 +148,13 @@ body{
   
     .footer svg {
       height: 130%;
-      fill: royalblue;
+      fill: #6534b4;
       background-color: rgba(70, 66, 66, 0.103);
       border-radius: 50%;
       padding: 2px;
       cursor: pointer;
       box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
+      
     }
   
     .footer p {
