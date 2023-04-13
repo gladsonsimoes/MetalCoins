@@ -20,11 +20,20 @@ if (!empty($user['loginUser'])) {
     $_SESSION["id"] = $data['id'];
     $_SESSION["id_perfil"] = $data["id_perfil"];
 
-    setcookie('login', $login);
-    echo "<script>
+    if ($_SESSION["id_perfil"] == 1) {
+      setcookie('login', $login);
+      echo "<script>
+      alert('Logado com Sucesso!');
+    </script>";
+      header("Location: ../../views/admin.php");
+    } else {
+
+      setcookie('login', $login);
+      echo "<script>
           alert('Logado com Sucesso!');
         </script>";
-    header("Location: ../../views/conta.php?user_id='" . $data['id'] . "'");
+      header("Location: ../../views/principal.php");
+    }
   } else {
     echo "<script>
    alert('Login e/ou senha incorretos');
