@@ -75,7 +75,7 @@
                 </div>
             </a>
 
-            <a href="CadastroProdutos.php">
+            <a href="CadastroProduto.php">
                 <div class="option">
                     <i class="fas fa-edit" aria-hidden="true" title="Editar"></i>
                     <h4>Gerenciar produtos</h4>
