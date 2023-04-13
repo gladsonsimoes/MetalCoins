@@ -64,8 +64,7 @@ function updateUser($user)
   global $conn;
   $empty_input = false;
   $queryUser = "UPDATE usuarios 
-  SET nome = '" . $user['name'] . "', 
-  email = '" . $user['email'] . "' 
+  SET nome = '" . $user['name'] . "'
   WHERE id ='" . $user['id'] . "' ";
   $updatedUser = $conn->prepare($queryUser);
 
