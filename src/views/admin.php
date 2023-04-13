@@ -1,5 +1,6 @@
 <?php 
  include('../controllers/Acess/protectedAdmin.php');
+ include('../controllers/Acess/protectedAdmin.php');
 
 ?>
 
@@ -53,7 +54,7 @@
 
         <div class="options__menu hp">	
 
-            <a href="index.php" class="selected">
+            <a href="admin.php" class="selected">
                 <div class="option">
                     <i  class="fas fa-home" title="Inicio"></i>
                     <h4>Inicio</h4>
@@ -70,20 +71,21 @@
             <a href="#">
                 <div class="option">
                     <i class="far fa-id-badge" title="Contacto"></i>
-                    <h4>Contacto</h4>
+                    <h4>Contato</h4>
                 </div>
             </a>
 
-            <a href="#">
+            <a href="CadastroProdutos.php">
                 <div class="option">
-                    <i class="fa fa-shopping-cart" aria-hidden="true" title="produtos"></i>
-                    <h4>Produtos</h4>
+                    <i class="fas fa-edit" aria-hidden="true" title="Editar"></i>
+                    <h4>Gerenciar produtos</h4>
                 </div>
             </a>
+
             <a href="tabela.php">
                 <div class="option">
                     <i class="fas fa-edit" aria-hidden="true" title="Editar"></i>
-                    <h4>Editar usuario</h4>
+                    <h4>Gerenciar usuários</h4>
                 </div>
             </a>
 
