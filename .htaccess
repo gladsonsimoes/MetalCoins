@@ -1,7 +1,7 @@
 #Bloqueio de visualizacoes de arquivos das pasta (questoes de seguranca)
 Options -Indexes
 
-DirectoryIndex login.php
+DirectoryIndex src/views
 
 RewriteEngine on
 
