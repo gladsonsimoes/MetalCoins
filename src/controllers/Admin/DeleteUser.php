@@ -1,9 +1,10 @@
 <?php
 include('../../../database/conexao.php');
 
-if (isset($_GET['id'])) {
+$id = $_GET['id'];
+$id_perfil = $_GET['id_perfil'];
 
-    $id = $_GET['id'];
+if ($id_perfil == 2) {
 
     $selectSQL = $conn->prepare("SELECT * FROM usuarios WHERE id=$id");
     $selectSQL->execute();
@@ -21,6 +22,11 @@ if (isset($_GET['id'])) {
         }
     } else {
         die("Usuario nao existe!");
-    } 
+    }
+} else if ($id_perfil == 1) {
+    echo "<script>
+    alert('Você não pode excluir um administrador!');
+    window.location.href='../../views/tabela.php';
+     </script>";
 }
 ?>

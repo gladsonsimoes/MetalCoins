@@ -96,7 +96,7 @@ include('../controllers/Acess/protectedAdmin.php');
                         </form> 
                     </dialog>
                 </td>";
-                            echo "<td><a class='btn btn-danger' id='delete-$row_usuario[id]' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
+                            echo "<td><a class='btn btn-danger' id='delete-$row_usuario[id]' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]&id_perfil=$row_usuario[id_perfil]'>Excluir</a></td>";
                             echo "</tr>";
                         }
                     } else {
