@@ -1,5 +1,4 @@
 <?php 
-//se nao tiver com login
 if(empty($_SESSION)){
     session_start();
 }
