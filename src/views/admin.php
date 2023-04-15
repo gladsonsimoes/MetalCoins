@@ -49,7 +49,7 @@
 
         <div class="options__menu hp">	
 
-            <a href="admin.php" class="selected">
+            <a  class="selected">
                 <div class="option">
                     <i  class="fas fa-home" title="Inicio"></i>
                     <h4>Inicio</h4>
