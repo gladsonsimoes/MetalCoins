@@ -37,7 +37,7 @@ if (!empty($user['loginUser'])) {
   } else {
     echo "<script>
    alert('Login e/ou senha incorretos');
-   window.location.href='../../views/Login.php';
+   window.location.href='../../views/login.php';
    </script>";
   }
 }

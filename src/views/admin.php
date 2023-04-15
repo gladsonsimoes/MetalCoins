@@ -12,22 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/produtos.css">
     <link rel="stylesheet" href="../styles/menu.css">
-    
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
 
     <title>Metalcoins</title>
-
-
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
@@ -77,14 +72,14 @@
 
             <a href="CadastroProduto.php">
                 <div class="option">
-                    <i class="fas fa-edit" aria-hidden="true" title="Editar"></i>
+                    <i class="fas fa-edit" aria-hidden="true" title="Gerenciar Produtos"></i>
                     <h4>Gerenciar produtos</h4>
                 </div>
             </a>
 
             <a href="tabela.php">
                 <div class="option">
-                    <i class="fas fa-edit" aria-hidden="true" title="Editar"></i>
+                    <i class="fas fa-edit" aria-hidden="true" title="Gerenciar usuários"></i>
                     <h4>Gerenciar usuários</h4>
                 </div>
             </a>
