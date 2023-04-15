@@ -37,8 +37,8 @@ function registerUser($user)
       $inserting = $conn->prepare($insertCoins);
       $inserted = $inserting->execute();
       echo "<script type='text/javascript'>
-      alert('Cadastro Realizado com Sucesso! ');
-      window.location.href='../../views/principal.php';
+      alert('Cadastro Realizado com Sucesso , Faça seu Login para entrar! ');
+      window.location.href='../../views/login.php';
       </script>";
     }
   }

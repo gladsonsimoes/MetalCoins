@@ -1,6 +1,7 @@
 <?php 
 include('../controllers/Acess/protected.php');
-include('../controllers/products/productsController.php');
+include('../controllers/Acess/contaAdmin.php');
+// include('../controllers/products/getProducts.php'); <- provavemente terá que criar 
 
 ?>
 
@@ -27,8 +28,6 @@ include('../controllers/products/productsController.php');
 
     <title>Metalcoins</title>
 
-
-
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
@@ -54,7 +53,7 @@ include('../controllers/products/productsController.php');
 
         <div class="options__menu hp">	
 
-            <a href="index.php" class="selected">
+            <a class="selected">
                 <div class="option">
                     <i  class="fas fa-home" title="Inicio"></i>
                     <h4>Inicio</h4>
