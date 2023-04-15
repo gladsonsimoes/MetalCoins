@@ -1,5 +1,6 @@
 <?php 
 include('../controllers/Acess/protected.php');
+include('../controllers/Acess/contaAdmin.php');
 // include('../controllers/products/getProducts.php'); <- provavemente terá que criar 
 
 ?>
