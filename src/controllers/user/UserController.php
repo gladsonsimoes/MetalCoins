@@ -49,7 +49,7 @@ function registerUser($user)
       </script>";
     } else {
       echo "<script>
-      alert('Erro ao enviar ao Banco de dados , USUÁRIO NÂO CADASTRADO!! ');
+      alert('ERRO  em enviar o cadastro com a conexao do banco , USUÁRIO NÂO CADASTRADO!!  ');
       window.location.href='../../views/cadastro.php';
       </script>";
     }
