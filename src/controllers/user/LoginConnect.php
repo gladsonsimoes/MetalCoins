@@ -6,7 +6,7 @@ $login = $_POST['email'];
 $senha = $_POST['password'];
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-if (!empty($user['loginUser'])) {
+if (isset($user['loginUser'])) {
   $queryUser = "SELECT * FROM usuarios WHERE (email='" . $user['email'] . "');";
   $result = $conn->prepare($queryUser);
   $result->execute() or die();
