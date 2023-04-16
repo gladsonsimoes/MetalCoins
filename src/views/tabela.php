@@ -1,8 +1,6 @@
 <?php
 include('../controllers/Acess/protectedAdmin.php');
-include_once('../../database/conexao.php');
-
-
+include('../../database/conexao.php');
 ?>
 
 <!DOCTYPE html>
@@ -12,22 +10,17 @@ include_once('../../database/conexao.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/produtos.css">
-    <link rel="stylesheet" href="../styles/menu.css">
-    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link href="../styles/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/googlefonts/QuickSand.css" rel="stylesheet">
+    <link href="../styles/googlefonts/alata.css" rel="stylesheet">
+    <link href="../styles/googlefonts/Irish+Grover.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/dialog.css">
     <link rel="stylesheet" href="../styles/tabela.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <script src="../js/kitFontAwesome/kitAwesome.js" crossorigin="anonymous"></script>
 
     <title>Listar Usuário</title>
 
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="body">
@@ -90,8 +83,6 @@ include_once('../../database/conexao.php');
         </div>
     </div>
     </form>
-
-    <script src="../js/script.js" type="text/javascript"></script>
     <br>
 
     <!--  CONTEUDO DA TABELA -->
@@ -159,8 +150,8 @@ include_once('../../database/conexao.php');
                         <input value='Alterar' name='EditUser' class='submit' type='submit'> 
                       <a class='btn btn-dark' id='cancel-$row_usuario[id]' href=''> Cancelar </a>    
                      </form> 
-            </dialog>
-        </td>";
+                      </dialog>
+                        </td>";
                             echo "<td><a class='btn btn-danger' id='delete-$row_usuario[id]' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
                             echo "</tr>";
                         }
@@ -173,7 +164,7 @@ include_once('../../database/conexao.php');
             <br>
         </div>
 
-        <!-- Página da Tabela -->
+        <!-- PÁGINAS  -->
         <div align="center" id="Listagem-Page">
             <?php
 
@@ -221,6 +212,7 @@ include_once('../../database/conexao.php');
     </div>
 
     <script src="../js/dialog.js" type="text/javascript"> </script>
+    <script src="../js/script.js" type="text/javascript"></script>
 
 </body>
 
