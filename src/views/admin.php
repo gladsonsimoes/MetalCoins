@@ -11,21 +11,16 @@ include('../controllers/Acess/protectedAdmin.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/produtos.css">
-    <link rel="stylesheet" href="../styles/menu.css">
-    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link href="../styles/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/googlefonts/QuickSand.css" rel="stylesheet">
+    <link href="../styles/googlefonts/alata.css" rel="stylesheet">
+    <link href="../styles/googlefonts/Irish+Grover.css" rel="stylesheet">
+    <link href="../styles/produtos.css" rel="stylesheet">
+    <link href="../styles/menu.css" rel="stylesheet">
 
     <title>Metalcoins</title>
 
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <script src="../js/kitFontAwesome/kitAwesome.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="body">
@@ -38,7 +33,8 @@ include('../controllers/Acess/protectedAdmin.php');
     <div class="Pesquisa">
         <form action="">
             <div class="form-group form-row">
-                <input type="text" name="name" class="form-control rounded-pill ex" required autocomplete="off" />
+                <input type="text" name="name" class="form-control rounded-pill ex" placeholder="Pesquisar Produto"
+                    required="required" />
 
             </div>
 
@@ -50,12 +46,12 @@ include('../controllers/Acess/protectedAdmin.php');
                 </div>
 
                 <div class="options__menu hp">
-                    <a class="selected">
+                    <div class="selected">
                         <div class="option">
                             <i class="fas fa-home" title="Inicio"></i>
                             <h4>Inicio</h4>
                         </div>
-                    </a>
+                    </div>
 
                     <a href="conta.php">
                         <div class="option">
@@ -94,7 +90,7 @@ include('../controllers/Acess/protectedAdmin.php');
                 </div>
             </div>
 
-         
+
         </form>
         <div class="Produtos">
             <div class="produto1">
@@ -146,7 +142,7 @@ include('../controllers/Acess/protectedAdmin.php');
             </div>
 
         </div>
-        </main>
+    
 
         <script src="../js/script.js"></script>
 
