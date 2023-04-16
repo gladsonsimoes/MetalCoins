@@ -62,7 +62,7 @@ include('../controllers/Acess/protectedAdmin.php');
                 <tbody>
                     <?php
                     $queryUser = "SELECT usuarios.*, conta_corrente.saldo
-                    FROM usuarios INNER JOIN conta_corrente 
+                    FROM usuarios INNER JOIN conta_corrente WHERE id_perfil= 2 
                     LIMIT $inicio, $limite_result";
                     $result = $conn->prepare($queryUser);
                     $result->execute(); 
@@ -96,7 +96,7 @@ include('../controllers/Acess/protectedAdmin.php');
                         </form> 
                     </dialog>
                 </td>";
-                            echo "<td><a class='btn btn-danger' id='delete-$row_usuario[id]' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]&id_perfil=$row_usuario[id_perfil]'>Excluir</a></td>";
+                            echo "<td><a class='btn btn-danger' id='delete-$row_usuario[id]' href='../controllers/Admin/DeleteUser.php?id=$row_usuario[id]'>Excluir</a></td>";
                             echo "</tr>";
                         }
                     } else {
