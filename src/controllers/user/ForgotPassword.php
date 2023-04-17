@@ -4,7 +4,7 @@ session_start();
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if ($user['password'] == $user['passwordConfirm']) {
-    if (!empty($user['forgotPass'])) {
+    if (isset($user['forgotPass'])) {
         $query = "SELECT * FROM usuarios WHERE (email='" . $user['email'] . "');";
         $result = $conn->prepare($query);
         $result->execute() or die();

@@ -11,8 +11,8 @@ $conn = new PDO('mysql:host='.$host.';port='.$port.';dbname='.$dbname, $user, $p
 } catch(PDOException $e) {
     echo '<br>
         <div align="center">
-         <h1 style="color: red;"> ERROR: <br></h1>
-         <h2>' . $e->getMessage(). '</h2>
+         <h3 style="color: red;"> ERROR: </h3>
+         <h3>' . $e->getMessage(). '</h3>
         </div>
    <br>';
 

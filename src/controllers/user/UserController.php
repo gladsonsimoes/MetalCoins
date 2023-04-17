@@ -1,6 +1,5 @@
 <?php
 include_once('../../../database/conexao.php');
-session_start();
 
 function registerUser($user)
 {
@@ -13,11 +12,17 @@ function registerUser($user)
   $result = $checkingUser->rowCount();
 
   if ($result > 0) {
-    echo ("<script type='text/javascript'>
+    echo ("<script>
     alert('E-mail já cadastrado! ');
-    window.location.href='../../views/Cadastro.php';
+    window.location.href='../../views/cadastro.php';
   </script>");
-  } else {
+  } else if (!filter_var($user['email'], FILTER_VALIDATE_EMAIL)){
+    echo ("<script>
+    alert('EMAIL INVÁLIDO!');
+    window.location.href='../../views/cadastro.php';
+  </script>");
+  }
+  else {
     $options = [
       'cost' => 10
     ];
@@ -30,15 +35,22 @@ function registerUser($user)
     $signedUser = $conn->prepare($queryUser);
     $signed = $signedUser->execute();
 
-    if ($signed) {
+    $signedtrue = $signed == true;
+
+    if ($signedtrue) {
       $user_id = $conn->lastInsertId();
       $insertCoins = "INSERT INTO conta_corrente (id_usuario, saldo, transacao, data_transacao)
         VALUES ('" . $user_id . "', 100, 'Recompensa por cadastro!', '" . $date . "');";
       $inserting = $conn->prepare($insertCoins);
       $inserted = $inserting->execute();
-      echo "<script type='text/javascript'>
-      alert('Cadastro Realizado com Sucesso , Faça seu Login para entrar! ');
+      echo "<script>
+      alert('Cadastro Realizado com SUCESSO , Faça seu Login para entrar! ');
       window.location.href='../../views/login.php';
+      </script>";
+    } else {
+      echo "<script>
+      alert('ERRO  em enviar o cadastro com a conexao do banco , USUÁRIO NÂO CADASTRADO!!  ');
+      window.location.href='../../views/cadastro.php';
       </script>";
     }
   }
@@ -82,9 +94,9 @@ function updateUser($user)
 
 $user = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-if (!empty($user['EditUser'])) {
+if (isset($user['EditUser'])) {
   updateUser($user);
 }
-if (!empty($user['createdUser'])) {
+if (isset($user['createdUser'])) {
   registerUser($user);
 }

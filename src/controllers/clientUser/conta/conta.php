@@ -4,7 +4,7 @@ include('../../database/conexao.php');
 $_SESSION["token"];
 $id = $_SESSION["id"];
 
-if (!isset($_SESSION["token"]) || empty($_SESSION["token"])) {
+if (empty($_SESSION["token"])) {
   header("Location: ../../views/Login.php");
   exit();
 } else {
