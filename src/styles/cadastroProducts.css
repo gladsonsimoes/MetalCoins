@@ -63,7 +63,7 @@ body{
     box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
     margin-top: 10px;
     font-size: 20px;
-    font-style:initial;
+    font-style: initial;
   }
   
   .botao {
@@ -107,7 +107,7 @@ body{
       gap: 5px;
       background: aliceblue; 
       position: absolute;
-     left: 1040px;
+     left: 850px;
      margin-top: 60px;
     }
   
