@@ -1,13 +1,6 @@
 # MetalCoins
 
 PDF dos requisitos: [8980_1.pdf](https://github.com/gladsonsimoes/MetalCoins/files/10849737/8980_1.pdf)
-
-
----
-
-## Modelo logico do Banco de dados
-<a href="modeloLogicoBD.png">Modelo Logico</a>
-
 ---
 
 Contextualização:
@@ -84,3 +77,8 @@ Para criar um contrato de licença de usuário final simplificado para o softwar
 7. Uma cláusula de arbitragem, se aplicável. (verificação de fraudes).
 
 8. Uma cláusula que obrigue o usuário final a cumprir com as leis aplicáveis.
+
+
+
+## Modelo logico do Banco de dados
+![Captura de tela 2023-02-09 194146](https://user-images.githubusercontent.com/99969693/217955561-a436515d-0d63-42da-8c9c-9704cf4789a7.png)
