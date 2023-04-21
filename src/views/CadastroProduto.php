@@ -37,6 +37,8 @@ include_once('../../database/conexao.php');
                         </g>
                     </svg>
                     <p>Foto do produto!</p>
+                    
+                    
                 </div>
                 <label for="file" class="footer">
                     <svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +63,7 @@ include_once('../../database/conexao.php');
                         </g>
                     </svg>
                 </label>
-                <input id="file" type="file">
+                <input id="file" type="file" accept=".png , .jpeg, .jpg" >
             </div>
 
             <input type="text" name="nome" class="input" placeholder="Nome" required>
