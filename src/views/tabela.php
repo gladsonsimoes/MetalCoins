@@ -118,8 +118,12 @@ include('../../database/conexao.php');
                 <!-- Listar Conteudo da Tabela -->
                 <tbody>
                     <?php
-                    $queryUser = "SELECT usuarios.*, conta_corrente.saldo
-                    FROM usuarios INNER JOIN conta_corrente WHERE id_perfil= 2 LIMIT $inicio, $limite_result";
+                    $queryUser = (
+                    "SELECT u.id , u.nome , u.email , u.id_perfil, c.saldo 
+                     FROM usuarios as u
+                     JOIN conta_corrente as c on u.id = c.id 
+                     WHERE id_perfil = 2 LIMIT $inicio, $limite_result"
+                    );
                     $result = $conn->prepare($queryUser);
                     $result->execute();
 
