@@ -1,1 +1,6 @@
+Order allow,deny
+Allow from all
+
+# Redirecionamento dá pagina de login
 DirectoryIndex  login.php
+
